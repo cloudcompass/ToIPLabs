@@ -1,5 +1,7 @@
-# Screencast: Public and Private DIDs
+# Screencast: Why We Need Private DIDs
 
-Temporary link to [screencast](PublicAndPrivateDIDs.mp4)
+In this presentation, we explain why private, pairwise DIDs are important and why ledger operators and you don't not want to put all your DIDs on a public ledger. It’s all about sharing DIDs only with those that need to know about them, without anyone else being able to see them at all. Let’s take a look!
 
-We'll be updating this page to embed a YouTube instance of the screencast on this page.
+To start the presentation, click [here](https://www.youtube.com/watch?v=Uiani8jMg-4).
+
+To return to the course, click [here]().
