@@ -1,6 +1,6 @@
 # AgentBook - ACA-Py Alice Agent Lab Instructions
 
-This demo shows how pairwise DIDs are usedestablish a secure, end-to-end messaging
+This demo shows how pairwise DIDs are used to establish a secure, end-to-end messaging
 connection between two Aries Agents. 
 
 The pairwise DIDs are the foundation of the DIDComm

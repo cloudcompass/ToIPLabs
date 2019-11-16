@@ -1,25 +1,6 @@
-<!----- Conversion time: 5.162 seconds.
+# Hyperledger Indy, Aries Ursa Agent Demo Guide
 
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* GD2md-html version 1.0β11
-* Sun Sep 16 2018 13:23:06 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/a/cloudcompass.ca/open?id=1KnM8H88REu6arFhqfBAthZttS-QaFGIAjwZwJq5KQsM
-
------>
-
-# Agent Demo Guide
-
-<!-- TOC depthFrom:1 depthTo:2 orderedList:false updateOnSave:false withLinks:true -->
-
-- [Agent Demo Guide](#agent-demo-guide)
+- [Hyperledger Indy, Aries Ursa Agent Demo Guide](#hyperledger-indy-aries-ursa-agent-demo-guide)
   - [PREFACE](#preface)
   - [INTRODUCTION](#introduction)
   - [ABOUT HYPERLEDGER INDY](#about-hyperledger-indy)
@@ -32,12 +13,13 @@ Conversion notes:
     - [Step 3: Establishing Relationships](#step-3-establishing-relationships)
     - [Step 4: It's All About Your Credentials](#step-4-its-all-about-your-credentials)
     - [Step 5: Applying for the Job](#step-5-applying-for-the-job)
+  - [Troubleshooting](#troubleshooting)
 
 <!-- /TOC -->
 
 ## PREFACE
 
-> **This demonstration is based on some early Indy Agent code that should *NOT* be used as the basis of new implementations or as a reference for implementing an agent. Since  this demonstration was developed the Indy (and Aries) community has evolved the notion of Agents significantly and this code base has been abandoned. It is still a good demo for understanding how agents work on a superficial level -- the concepts of agents connecting and exchanging credentials. However, if you are interested in building on the latest Indy/Aries code, you should look at the [Aries project](https://github.com/hyperledger/aries), the [Aries Cloud Agent - Python](https://github.com/hyperledger/aries-cloudagent-python) and other interoperable components. If you are a developer (or wannabe), check out this [Becoming an Indy/Aries Developer](https://github.com/hyperledger/aries-cloudagent-python/tree/master/docs/GettingStartedAriesDev) guide.**
+> **This demonstration is based on some early Indy Agent code that should *NOT* be used as the basis of new implementations or as a reference for implementing an agent. Since this demonstration was developed the Indy and Aries community has evolved the notion of Agents significantly and this code base has been abandoned. It is still a good demo for understanding how agents work on a superficial level -- the concepts of agents connecting and exchanging credentials. However, if you are interested in building on the latest Indy/Aries code, you should look at the [Aries project](https://github.com/hyperledger/aries), the [Aries Cloud Agent - Python](https://github.com/hyperledger/aries-cloudagent-python) and other interoperable components. If you are a developer (or wannabe), check out this [Becoming an Indy/Aries Developer](https://github.com/hyperledger/aries-cloudagent-python/tree/master/docs/GettingStartedAriesDev) guide.**
 
 ## INTRODUCTION
 
@@ -312,5 +294,8 @@ Acme validates the Proof of Transcript-Data to show:
 
 Acme knows now that Alice graduated with a Bachelor's Degree in 2015 and she gets the job!
 
+## Troubleshooting
 
-<!-- GD2md-html version 1.0β11 -->
+> As issues are discovered by users of this demo, we'll add troubleshooting instructions here.
+
+* The "validate" of the Government ID Credential for each of the Identities is often failing - displaying a large red "X". We're not sure why that is happening in some cases but not others.
