@@ -72,19 +72,16 @@ The expectation is that you will have many DIDs - one for each relationship you 
 
 ### Verifiable Credentials
 
-Indy supports an emerging W3C standard called _Verifiable Credentials_[ (VCs)](https://www.w3.org/2017/vc/WG/) that enables a trusted way to provide identity attributes about ourselves (such as our name, age, bank account number, degree held, place of birth, etc.). 
+Indy supports a new W3C standard called _Verifiable Credentials_[ (VCs)](https://w3c.github.io/vc-data-model/) that enables a trusted way to provide identity attributes about ourselves (such as our name, age, bank account number, degree held, place of birth, etc.).
 
 Credentials are things such as driver's licenses, passports, or university degrees that are given to us from an issuing authority (Issuer) and that we can show when needed. VCs are digital equivalents of these paper credentials that are cryptographically processed such that when we show ("prove") the claims (data elements from the credentials), the receiver ("verifier") can be certain:
 
-
-
-*   Who issued the claims
-*   That the claims were issued to the Identity presenting them
-*   That the claims have not been tampered with (forged), and
-*   That the claims' credential has not been revoked by the Issuer
+- Who issued the claims
+- That the claims were issued to the Identity presenting them
+- That the claims have not been tampered with (forged), and
+- That the claims' credential has not been revoked by the Issuer
 
 Users can create Decentralized Identifiers (DIDs), use those DIDs to communicate securely with others, and use Verifiable Credentials and Claims to prove things about themselves such that they can execute trusted digital transactions.
-
 
 ### Agents and Wallets
 
@@ -98,13 +95,11 @@ Indy uses the term _Agent_ to mean the software that interacts with other identi
 To demonstrate how Indy works, we have created a short demo involving the following agents:
 
 
-*   **Alice**, who went to Faber College and wants to apply for a job at Acme
-*   **Faber College**, which granted Alice's degree
-*   **Acme**, who needs an official copy of Alice's transcript 
+* **Alice**, who went to Faber College and wants to apply for a job at Acme
+* **Faber College**, which granted Alice's degree
+* **Acme**, who needs an official copy of Alice's transcript 
 
-Start the demo as per the start instructions in [README.md](README.md). Notice that you should have three browser tabs open - Alice, Faber and ACME. These are the Agents, each running in a Docker container and accessed on separate localhost ports: Alice (localhost:3000), Faber College (localhost:3002) and Acme Corporation (localhost:3003). Although you are accessing them all on the same machine, imagine that they are all running independently, in different places.
-
-> If you are running this demo using the "In Browser" instructions, the URL for the different Agents will be similar to this: `http://ip172-18-0-14-bf52ab6ac3u00082oj2g-3001.direct.labs.play-with-docker.com/#credentials`, where the "3001" before the word ".direct" is the exposed port number that you clicked on.
+Start the demo as per the start instructions in [README.md](README.md). You should have three browser tabs open - Alice, Faber and ACME.
 
 |![BrowserTabs](images/BrowserTabs.png "Demo Browser Tabs")|
 |:--:|
@@ -114,14 +109,13 @@ Start the demo as per the start instructions in [README.md](README.md). Notice t
 
 Apart from the colours and name in the top right, each Agent looks the same. There is a menu across the top, as shown in the screenshot below.  If you click across each menu item you will see:
 
-*   Each has no relationships or messages
-*   Each has one credential - from the Government - that has the official "Name" of the Identity (Alice, Faber, etc.)
-*   Each has some things under Proof Requests and Issuing. We'll get into those later.
+- Each has no relationships or messages
+- Each has one credential - from the Government - that has the official "Name" of the Identity (Alice, Faber, etc.)
+- Each has some things under Proof Requests and Issuing. We'll get into those later.
 
 |![AgentScreen](images/AgentScreen.png "Agent Home Screen from Demo")|
 |:--:|
 |*Licensed under [CC By 4.0](https://creativecommons.org/licenses/by/4.0/)*|
-
 
 You will also see that at the bottom of the screen each user has a DID. Each generated their DID and published it to the instance of Hyperledger Indy ledger we started. Knowing a DID, another Agent can look up on that ledger and get back the public key and endpoint associated with that DID.  We'll use those DIDs later to connect the Agents so that they can exchange messages.
 
@@ -133,8 +127,8 @@ Before we get started, Faber has to do some one time setup that we'll do first. 
 
 
 
-*   First, we'll post to the Hyperledger Indy Ledger a transcript _Schema_. This is a public definition of what fields (claims) are in Transcript Credentials that Faber will issue to its graduates. Since it is public, the Schema could be published by anyone (such as the "Association of Colleges and Universities") and can be used by anyone (such as other institutions like "Port Chester University").
-*   Second, we'll post to the Hyperledger Indy Ledger a "Credential Definition," an Indy component that links a particular Credential Issuer (Faber in this case), with a Schema (the Transcript Schema), an optional Revocation Registry (we're not going to use that) and a series of Keys used for encryption and signing of the Claims in the Credentials.
+* First, we'll post to the Hyperledger Indy Ledger a transcript _Schema_. This is a public definition of what fields (claims) are in Transcript Credentials that Faber will issue to its graduates. Since it is public, the Schema could be published by anyone (such as the "Association of Colleges and Universities") and can be used by anyone (such as other institutions like "Port Chester University").
+* Second, we'll post to the Hyperledger Indy Ledger a "Credential Definition," an Indy component that links a particular Credential Issuer (Faber in this case), with a Schema (the Transcript Schema), an optional Revocation Registry (we're not going to use that) and a series of Keys used for encryption and signing of the Claims in the Credentials.
 
 Together, that public data is what allows Faber to issue a Transcript Credential to Alice that she can later prove to Acme.
 
@@ -312,9 +306,9 @@ Acme validates the Proof of Transcript-Data to show:
 
 
 
-*   The claims came from Faber College
-*   The claims were provided by Alice
-*   The claims were not tampered with
+* The claims came from Faber College
+* The claims were provided by Alice
+* The claims were not tampered with
 
 Acme knows now that Alice graduated with a Bachelor's Degree in 2015 and she gets the job!
 
