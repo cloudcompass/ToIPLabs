@@ -46,12 +46,12 @@ Go to the [Play with Docker](https://labs.play-with-docker.com/) and (if necessa
 
 Click the "Start" button to start a Docker sandbox you can use to run the demo, and then click the `+Add an Instance` link to start a terminal in your browser. Within the browser, run the following command:
 
-- `git clone https://github.com/hyperledger/education`
+- `git clone https://github.com/cloudcompass/ToIPLabs`
 
 > **Tip**: To paste text in the terminal window, right-click on the window and choose `paste`
 
 - Navigate to the location of the code by running the command:
-  - `cd education/LFS171x/indy-material/nodejs`
+  - `cd ToIPLabs/src/indy-material/nodejs`
 
 ### Local Machine
 
