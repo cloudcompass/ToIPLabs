@@ -4,8 +4,6 @@ In this presentation, we'll use a Hyperledger Indy ledger browser called [indysc
 
 To start the presentation, click [here](https://www.youtube.com/watch?v=9UwTTsX0UpU).
 
-To return to the course, click here.
-
 [indyscan.io](https://indyscan.io) is an open source project ([github repo](https://github.com/Patrik-Stas/indyscan)) that can be used to monitor the activity and search the transactions of any Hyperledger Indy network.
 
-VON Network from the Government of British Columbia is a second Indy ledger browser, and also provides a site where you can look at the [Sovrin MainNet](https://sovrin-mainnet-browser.vonx.io/). The [VON-Network github repo](https://github.com/bcgov/von-network) includes code to quickly spin up your own 4-node instance of a Hyperledger Indy ledger project running on Docker.
+VON Network from the Government of British Columbia is a second Indy ledger browser, and also provides a [Sovrin MainNet ledger browser site](https://sovrin-mainnet-browser.vonx.io/). The open source [VON-Network github repo](https://github.com/bcgov/von-network) includes code to quickly spin up your own 4-node instance of a Hyperledger Indy ledger project running on Docker.
