@@ -21,7 +21,7 @@ For this demo we'll use [Play with Docker](https://labs.play-with-docker.com) a 
 - In the terminal window, copy, paste and execute the following commands:
 
 ```
-https://github.com/hyperledger/aries-cloudagent-python
+git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python/demo/
 LEDGER_URL=http://dev.bcovrin.vonx.io ./run_demo alice
 ```
