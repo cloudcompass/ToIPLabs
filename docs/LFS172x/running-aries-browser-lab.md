@@ -16,4 +16,4 @@ In the second demonstration, we build and run a web-based demo of interacting ag
 
 To see a short screencast of the demo, click [here](https://youtu.be/5EA-jqkvn4I).
 
-Want to run the demo yourself?  Click [here](../src/indy-material/nodejs/README.md) for instructions on running the Alice-Faber-ACME demo. All you need is a browser.
+Want to run the demo yourself?  Click [here](https://github.com/cloudcompass/ToIPLabs/blob/master/src/indy-material/nodejs/README.md) for instructions on running the Alice-Faber-ACME demo. All you need is a browser.
