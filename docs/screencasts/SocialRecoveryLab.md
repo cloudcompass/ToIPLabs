@@ -4,4 +4,4 @@ In this screencast, we demonstrate how you might go about “sharding” your re
 
 To illustrate Shamir’s Secret Sharing, we use a website called [PassGuardian.com](http://passguardian.com/)that was created to demonstrate an implementation of secret sharing. Feel free to try out [PassGuardian.com](http://passguardian.com/) yourself once you’ve listened to the lab.
 
-To start the lab, click [here](https://www.youtube.com/watch?v=uz8QMxPvOb8).
+To start the lab, click [here](https://youtu.be/1c05mFuEQ5s).

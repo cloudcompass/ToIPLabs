@@ -2,7 +2,7 @@
 
 In this presentation, we'll use a Hyperledger Indy ledger browser called [indyscan.io](https://indyscan.io) to take a look at some real DIDs, schema and other objects on Sovrin Foundation's MainNet ledger. MainNet is a global, production instance of an Indy ledger.
 
-To start the presentation, click [here](https://www.youtube.com/watch?v=9UwTTsX0UpU).
+To start the presentation, click [here](https://youtu.be/1QObiTtgnCc).
 
 [indyscan.io](https://indyscan.io) is an open source project ([github repo](https://github.com/Patrik-Stas/indyscan)) that can be used to monitor the activity and search the transactions of any Hyperledger Indy network.
 
