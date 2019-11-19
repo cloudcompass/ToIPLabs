@@ -2,7 +2,7 @@
 
 ## Change Log Overview
 
-This document is a change log for major updates that we make to the content of the edX course [LFS172x Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa](). 
+This document is a change log for major updates that we make to the content of the edX course [LFS172x Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa](https://www.edx.org/course/introduction-to-hyperledger-sovereign-identity-blockchain-solutions-indy-aries-and-ursa). 
 
 While we have tried to be as accurate and timely as possible with the course content, these tools and libraries are changing rapidly. There may be mistakes and we own that. Keeping this in mind, this change log tracks all major changes we make to content when we discover mistakes or when shifts occurs within the Hyperledger Indy, Aries and Ursa space.
 
