@@ -4,7 +4,7 @@ Welcome to the demonstration section of the Linux Foundation's edX course LF172x
 
 ## Mobile Agent Demonstration
 
-### 2019.11.28: Due to a current version mismatch between the Streetcred app and IIWBook, this demonstration cannot be run at this time.  This note will be removed when the demo is working again - probably in the next few days.
+### 2019.12.06: The IIWBook demo is back and running. If you want to try it, go ahead!
 
 In the first (called "IIWBook"), we use an Aries smartphone agent called Streetcred (from [Streetcred.id](Streetcred.id)) to interact with an Aries-based website (with Indy and Ursa embedded, of course) that issues you a verifiable credential, and a second site, also Aries-based, that requests a proof of the credential you have, and then issues you a second credential.
 
