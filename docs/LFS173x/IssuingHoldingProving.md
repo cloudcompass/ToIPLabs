@@ -4,7 +4,7 @@ In this lab, we'll use a couple of simple services that issue and verify credent
 
 <!--- (To start the presentation, click [here](https://youtu.be/He1QHYuYxlw).) -->
 
-Click [here]([#](https://github.com/bcgov/vc-authn-oidc/blob/master/docs/DemoInstructions.md)) for instructions on running through the process.
+Click [here](https://github.com/bcgov/vc-authn-oidc/blob/master/docs/DemoInstructions.md) for instructions on running through the process.
 
 ## To Do:
 - NTH: Add screencast based on presentation linked in vc-authn-oidc
