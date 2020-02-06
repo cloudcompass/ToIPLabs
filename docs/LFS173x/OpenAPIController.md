@@ -1,4 +1,4 @@
-# Lab: Links Into Controller Code Examples
+# Lab: OpenAPI/Swagger Controller
 
 In this lab, you are the controller. We'll use an OpenAPI/Swagger user interface to allow you to be an Aries agent controller. We'll use the same Alice/Faber demo, but this time you will provide the "business logic" to decide if Alice is going to accept Faber's offer of a credential.
 
