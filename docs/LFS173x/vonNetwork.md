@@ -9,4 +9,4 @@ Click [here](https://github.com/bcgov/von-network) for an overview of VON Networ
 ## To Do:
 - NTH: Add screencast
 - Add more instructions of using the network
-- Add example of starting Alice and Faber and looking at the objects on the ledger
+  - Start a von-network-based Indy Network, browse the ledger, look at the genesis file and create a DID.
