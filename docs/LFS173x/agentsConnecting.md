@@ -1,4 +1,4 @@
-# LFS173x Lab: Agents Connecting
+# Lab: Agents Connecting
 
 In this lab, we'll spin up a couple of Aries agents, establish connections between them agents and have them exchange messages using the Aries `Basic Message` Protocol.
 

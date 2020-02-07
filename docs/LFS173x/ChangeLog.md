@@ -1,4 +1,4 @@
-# LFS173x Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa
+# LFS173x Becoming an Aries Developer
 
 ## Change Log Overview
 
