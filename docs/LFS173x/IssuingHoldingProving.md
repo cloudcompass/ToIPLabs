@@ -1,4 +1,4 @@
-# LFS173x Lab: Issuing, Holding and Proving Verifiable Credentials
+# Lab: Issuing, Holding and Proving Verifiable Credentials
 
 In this lab, we'll use a couple of simple services that issue and verify credentials, and a mobile agent to hold and prove credentials.
 
