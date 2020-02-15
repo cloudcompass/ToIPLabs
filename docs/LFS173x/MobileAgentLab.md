@@ -9,4 +9,4 @@ Click [here](#) for instructions on running through the process.
 ## To Do:
 - NTH: Add screencast
 - Links to the three projects
-- If available, links to labs about the three projects
+- If available, links to labs about the three projectsd
