@@ -17,15 +17,15 @@ Conversion notes:
 
 
 
-# **Lab: Scripting Production Writes**
+# Lab: Scripting Production Writes
 
 
-## **Overview**
+## Overview
 
-In this lab, we'll show a series of scripts that can be used to write to an Indy ledger (such as the Sovrin MainNet) when your agent is not an endorser and so is not permitted to write directly to the ledger.
+In this lab, we'll show a series of scripts that can be used to write to an Indy ledger (such as the Sovrin MainNet) when your agent is not an endorser and so is not permitted to write directly to the ledger. What is required is that your agent must prepare and sign the transaction, pass the transaction to an endorser to sign, and then either the author or the endorser can submit the doubly-signed transaction to the ledger.
 
 
-## **How to Run**
+## How to Run
 
 This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
 
@@ -34,18 +34,18 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 *   [Running LFS173x Labs](RunningLabs.md)
 
 
-## **Instructions**
+## Instructions
 
-The scenario that we’ll work through in the lab is that you are going to production on a fully permissioned Indy ledger, like the Sovrin MainNet, and you don’t have a DID that is permitted to write to the ledger. In Indy terms, you are a transaction author, and you need a transaction endorser to do the writes for you. Both of you must sign the transactions.
+The scenario that we’ll work through in the lab is that you are going to production on a fully permissioned Indy ledger (like the Sovrin MainNet) you need to create some ledger objects (e.g. a schema and credential definition) and you don’t have a DID that is permitted to write to the ledger. In Indy terms, you are a transaction author, and you and a transaction endorser must sign your transactions before they can be written to the ledger.
 
 At the time this process was written it was necessary to do this to get transactions written to the Sovrin MainNet. Don’t worry—the mechanics of doing this have gotten easier since this was put together. However, we think this is a good exercise to go through to understand the interactions that must happen. Even when the process is fully automated (likely through Aries protocols), the steps still have to happen.
 
-Further, as you do these operations, please note that you are updating your agent’s storage (it’s Indy wallet) and so you must make sure it is preserved. Once the process is complete, the agent that will use these objects (DIDs and credential definitions) ongoing must use the same wallet.
+Further, as you do these operations, please note that you are updating your agent’s storage (it’s Indy wallet) and so you must make sure it is preserved. Once the process is complete, the agent that will ultimately use these objects (the DIDs, schema and credential definitions) **must** use the same wallet.
 
-To run the lab, follow the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md).
+To run the lab, follow the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md). As noted above, you can run the steps in Play with Docker or locally using Docker.
 
 
-## **Takeaways**
+## Takeaways
 
 In completing this lab you will see the complexity that comes from having a permissioned ledger, where (in some cases) transactions must be signed and written to the ledger by endorsers on behalf of those without write permissions.
 

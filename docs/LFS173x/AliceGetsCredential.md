@@ -17,11 +17,11 @@ Conversion notes:
 
 
 
-# **Lab: Alice Gets a Credential**<!-- omit in toc -->
+# Lab: Alice Gets a Credential<!-- omit in toc -->
 
-- [**Overview**](#overview)
-- [**How to Run**](#how-to-run)
-- [**Instructions**](#instructions)
+- [Overview](#overview)
+- [How to Run](#how-to-run)
+- [Instructions](#instructions)
   - [Faber Controller](#faber-controller)
     - [Issuer Initialization](#issuer-initialization)
     - [Request From User to Issue Credential](#request-from-user-to-issue-credential)
@@ -29,19 +29,19 @@ Conversion notes:
   - [Alice Controller](#alice-controller)
     - [Credential Offer Received](#credential-offer-received)
     - [Proof Request Received](#proof-request-received)
-- [**Takeaways**](#takeaways)
+- [Takeaways](#takeaways)
 
-## **Overview**
+## Overview
 
 In this lab, we'll take the earlier Alice and Faber College lab a little further, demonstrating the issuance of a verifiable credential from Faber to Alice, and then Faber requesting proof based on the credential from Alice. While there is not much new to see in running this example, we’ll be drilling into the places in the controller code where all the key events are handled.
 
 
-## **How to Run**
+## How to Run
 
 This lab from the ACA-Py repository includes details about running the example locally using Docker, on Play with Docker, and even has some guidance on running the lab without Docker. As always, we recommend running the lab using Docker, so you don’t get bogged down in technical issues unrelated to the lessons of the lab.
 
 
-## **Instructions**
+## Instructions
 
 We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo), this time completing the full tutorial.
 
@@ -145,7 +145,7 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
 While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [issue credential](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/issue_credential) and [present proof](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/present_proof) protocol handlers. Look into the “v1.0” folder for the Python code. And of course, those really interested can drill down into the Indy SDK, and even deeper into Ursa.
 
 
-## **Takeaways**
+## Takeaways
 
 In this lab we’ve seen a simple command line example of agents issuing, holding, proving and verifying credentials. We’ve also walked through the places in the controller code where the key events in the processes happen. The creation of controllers are at the core of what an Aries developer does, so this lab is crucial in understanding that task.
 

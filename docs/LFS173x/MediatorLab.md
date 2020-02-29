@@ -17,15 +17,15 @@ Conversion notes:
 
 
 
-# **Lab: Using a Mediator**
+# Lab: Using a Mediator
 
 
-## **Overview**
+## Overview
 
 In this lab, show a script running two ACA-Py-based agents interacting while one of them is using a mediator. We’ll be running a version of the Alice-Faber demo that is used for performance testing.
 
 
-## **How to Run**
+## How to Run
 
 This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
 
@@ -34,7 +34,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 *   [Running LFS173x Labs](RunningLabs.md)
 
 
-## **Instructions**
+## Instructions
 
 For this lab, you will need just a single terminal session. As with many of the other labs, clone the ACA-Py repo in the terminal session on Play with Docker or locally:
 
@@ -42,6 +42,7 @@ For this lab, you will need just a single terminal session. As with many of the 
 ```
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python/demo
+
 ```
 
 
@@ -50,10 +51,11 @@ The performance demonstration runs an instance of Alice and Faber, and has Faber
 
 ```
 LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance --routing --timing --count 100
+
 ```
 
 
-After the run, review the timing output to see both the counts of the controller actions executed and the cumulative time taken for each action. As you scan the numbers, think about how controllers work and the number of actions that were executed. Do those counts make sense, given the number of credentials issued/received? Do the timings make sense? Note the actions that are especially slow. Notice as well that the total time taken to run the test is less the cumulative time for all the actions. Why? It’s because Faber is issuing multiple credentials in parallel—not waiting for Alice to respond to one before starting the next.
+After the run, review the timing output to see both the counts of the controller actions executed and the cumulative time taken for each action. As you scan the numbers, think about how controllers work and the number of actions that were executed. Do those counts make sense, given the number of credentials issued/received? Do the timings make sense? Note the actions that are especially slow. Think about why they would be slow. Likely it's because of the underlying cryptographic actions that are being executed. Notice as well that the total time taken to run the test is less the cumulative time for all the actions. Why? It’s because Faber is issuing multiple credentials in parallel—not waiting for Alice to respond to one before starting the next.
 
 If you are interested, you can run the tests with a different number of credential issuances (by changing the `--count` number) and without the mediator (by removing the `--routing` parameter). The latter change will show you the impact of the mediator.
 
@@ -76,11 +78,11 @@ After that, the Faber and Alice controllers don’t do anything differently—th
 The underlying message? Adding in mediators has a small impact on the controller that is going to use the mediator, but has no impact on anything else. Routing with mediators is handled at the messaging envelope protocol layer (DIDComm) without affecting the higher level Aries protocols.
 
 
-## **Takeaways**
+## Takeaways
 
 The key takeaway from this lab is how mediators can be integrated into agent-to-agent scenarios with minimal impact to the agents code. There is no impact on the controllers of agents connecting to an agent with a mediator. For an agent using a mediator, there is a little bit of effort in connecting to the mediator, but after that is done, the rest of the controller operations “just work” with the mediator in place.
 
-Some of you will be disappointed that this lab does not include a mobile agent (or at least a simulated one) and a mediator for that mobile agent. We are too. To this point in the evolution of Aries, the mobile agent mediators that have been built have not been open source, so we have no good examples to share. That’s changing rapidly, and if we can find a good mobile agent and mediator example, we’ll update this lab. Interested in contributing a mediator demo to one of the Aries repos?  Let us know!
+Some of you will be disappointed that this lab does not include a mobile agent (or at least a simulated one) and a mediator for that mobile agent. We are too! To this point in the evolution of Aries, the mobile agent mediators that have been built have not been open source, so we have no good examples to share. That’s changing rapidly, and if we find a good mobile agent and mediator example, we’ll update this lab. Interested in contributing a mediator demo to one of the Aries repos?  Let us know!
 
 That's it for this lab! Please return to the course.
 

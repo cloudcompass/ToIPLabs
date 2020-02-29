@@ -17,12 +17,12 @@ Conversion notes:
 
 
 
-# **Lab: Agents Connecting**<!-- omit in toc -->
+# Lab: Agents Connecting<!-- omit in toc -->
 
-- [**Overview**](#overview)
-- [**How to Run**](#how-to-run)
-- [**Instructions**](#instructions)
-- [**Navigating the Code**](#navigating-the-code)
+- [Overview](#overview)
+- [How to Run](#how-to-run)
+- [Instructions](#instructions)
+- [Navigating the Code](#navigating-the-code)
   - [Faber Controller](#faber-controller)
     - [Agent Startup](#agent-startup)
     - [Connection Invitation Creation](#connection-invitation-creation)
@@ -33,20 +33,20 @@ Conversion notes:
     - [Accept Invitation](#accept-invitation)
     - [User input Processing](#user-input-processing-1)
     - [Send a Basic Message](#send-a-basic-message-1)
-- [**Takeaways**](#takeaways)
+- [Takeaways](#takeaways)
 
 
-## **Overview**
+## Overview
 
 In this lab, we spin up a couple of Aries agents, establish connections between them and have them exchange messages using the Aries `Basic Message` Protocol.
 
 
-## **How to Run**
+## How to Run
 
 This lab from the ACA-Py repository includes details about running the example locally using Docker, on Play with Docker, and even has some guidance on running the lab without Docker. As always, we recommend running the lab using Docker, so you don’t get bogged down in technical issues unrelated to the lessons of the lab.
 
 
-## **Instructions**
+## Instructions
 
 This tutorial in the ACA-Py repository spins up agents for Alice and Faber and has them connect and exchange messages. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo), stopping at the end of the “Exchanging Messages” section. We’ll do the rest of the tutorial later (which admittedly, isn’t much!).
 
@@ -60,7 +60,7 @@ One important thing to understand about this particular demo is the agent and co
 There has been discussion of changing this demo to make the separation of controller and ACA-Py instance more obvious. In a later lab we’ll see examples of other controllers for Alice and Faber using the same ACA-Py instance, making the separation more obvious.
 
 
-## **Navigating the Code**
+## Navigating the Code
 
 Now let’s take a look at the controller code. We’ll cover here the important parts of the controllers starting up, connecting and sending text messages. In a later lab, we’ll complete the demo through issuing and proving verifiable credentials and cover those parts of the controller code. Since we aren’t dealing with verifiable credentials in this part of the code walkthrough, little of what is covered here relates to Indy or an Indy ledger.
 
@@ -167,7 +167,7 @@ The startup of the Alice controller is almost the same as Faber, so we’ll leav
 While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [connections](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/connections) and [basic message](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/basicmessage) protocol handlers.
 
 
-## **Takeaways**
+## Takeaways
 
 This lab demonstrates:
 

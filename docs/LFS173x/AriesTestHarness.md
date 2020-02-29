@@ -17,27 +17,27 @@ Conversion notes:
 
 
 
-# **Lab: Aries Agent Test Harness**
+# Lab: Aries Agent Test Harness
 
 
-## **Overview**
+## Overview
 
 In this lab, we'll take a look at the Aries Agent Test Harness.
 
 
-## **How to Run**
+## How to Run
 
 We’ll run this lab from the GitHub repository for the Aries Agent Test Harness, relying on it for “how to run” guidance.
 
 
-## **Instructions**
+## Instructions
 
-As of the writing of this lab there is a little bit of information in the Aries Agent Test Harness repo on how to run through some tests with the test harness. To get to the repository and give it a try, click [here](https://github.com/bcgov/aries-agent-test-harness) and follow the instructions.
+As of the writing of this lab there is only a little bit of information in the Aries Agent Test Harness repo on how to run through some tests with the test harness. To get to the repository and give it a try, click [here](https://github.com/bcgov/aries-agent-test-harness) and follow the instructions.
 
 We’ll update the information on this page as we learn more about the test harness and how to use it.
 
 
-## **Takeaways**
+## Takeaways
 
 Since the lab does not include any specific guidance on what to do, the main takeaway is that the Aries Agent Test Harness repository has been created and that tests are being added to it. As you get deeper into Aries, check back on the test harness to see the progress being made and if you can use it in your day-to-day Aries work.
 
