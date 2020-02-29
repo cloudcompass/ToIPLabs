@@ -62,7 +62,7 @@ The other commands to run for this lab to see all of the command line parameters
 
 ## Takeaways
 
-By completing this lab, you now know how to find the current set of command line parameters you can use in starting an instance of ACA-Py. As you go through the output from ACA-Py, you should compare that with the material we covered about ACA-Py in the LFS173x course.
+By completing this lab, you now know how to find the current set of command line parameters you can use in starting an instance of ACA-Py. As you go through the output from ACA-Py, you should compare that with the material we covered about ACA-Py in the [edX LFS173x](https://www.edx.org/course/becoming-a-hyperledger-aries-developer) course.
 
 While this lab and the command line parameters reviewed are specific to ACA-Py, the concepts are more or less the same across all other Aries agent frameworks. The mechanism (command line parameters) and the precise list may vary in different frameworks, but some configuration mechanism must be available, and some set of configurable options must be available in each.
 
