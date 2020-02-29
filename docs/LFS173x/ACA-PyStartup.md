@@ -17,15 +17,15 @@ Conversion notes:
 
 
 
-# **Lab: Agent Startup Options**
+# Lab: Agent Startup Options
 
 
-## **Overview**
+## Overview
 
 In this lab, we'll demonstrate how to see the current list of ACA-Py parameters for both the `provision` and `start` modes of operation.
 
 
-## **How to Run**
+## How to Run
 
 This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
 
@@ -34,7 +34,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 *   [Running LFS173x Labs](RunningLabs.md)
 
 
-## **Instructions**
+## Instructions
 
 For this lab, we are going to use [these instructions in the ACA-Py repository](https://github.com/hyperledger/aries-cloudagent-python/blob/master/DevReadMe.md#configuring-aca-py-command-line-parameters) to review the current set of command line parameters for ACA-Py. To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
 
@@ -42,6 +42,7 @@ For this lab, we are going to use [these instructions in the ACA-Py repository](
 ```
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python
+
 ```
 
 
@@ -51,18 +52,19 @@ Use the instructions here in the ACA-Py repo to run an ACA-Py docker image and s
 
 
 ```
-./run_docker help
+scripts/run_docker --help
+
 ```
 
 
 The other commands to run for this lab to see all of the command line parameters are provided in the ACA-Py document.
 
 
-## **Takeaways**
+## Takeaways
 
-By completing this lab, you now know how to find the current set of command line parameters you can use in starting an instance of ACA-Py. As you go through the output from ACA-Py, you should compare that with what we covered about ACA-Py in the LFS173x course.
+By completing this lab, you now know how to find the current set of command line parameters you can use in starting an instance of ACA-Py. As you go through the output from ACA-Py, you should compare that with the material we covered about ACA-Py in the LFS173x course.
 
-While this lab and the command line parameters reviewed are specific to ACA-Py, the concepts are more or less the same across all other Aries agent frameworks. The mechanism (command line parameters) and the precise list may vary in different frameworks, but some mechanism must be available, and some set of configurations must be in each.
+While this lab and the command line parameters reviewed are specific to ACA-Py, the concepts are more or less the same across all other Aries agent frameworks. The mechanism (command line parameters) and the precise list may vary in different frameworks, but some configuration mechanism must be available, and some set of configurable options must be available in each.
 
 In later labs, we'll point out where in code the ACA-Py is started to see the command line parameters in effect for that agent instance.
 

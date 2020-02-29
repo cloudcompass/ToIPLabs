@@ -17,20 +17,20 @@ Conversion notes:
 
 
 
-# **Lab: Open Source Mobile Agent Projects**
+# Lab: Open Source Mobile Agent Projects
 
 
-## **Overview**
+## Overview
 
 In this lab, we'll take a look at the open source options to use as the foundation for an Aries Mobile Agent.
 
 
-## **How to Run**
+## How to Run
 
 In this lab we’ll just connect you to the options and you can look at the information available for you to use in getting started with these mobile agents.
 
 
-## **Instructions**
+## Instructions
 
 As of the writing of this lab, there is little information on how to get started with the available open source mobile agent repositories. As such, for this lab we’re just providing links to the three repositories for now, and encouraging you to take a look at what’s available. As better examples of these capabilities become available, we’ll update this page with that information.
 
@@ -42,7 +42,7 @@ As of the writing of this lab, there is little information on how to get started
 *   React Native Indy SDK ([rn-indy-sdk](https://github.com/AbsaOSS/rn-indy-sdk/tree/master)) - React Native
 
 
-## **Takeaways**
+## Takeaways
 
 Since the lab does not have any specific guidance on what to do, the only takeaway is that there are some open source options for getting started in building an Aries Mobile Agent. As Aries open source mobile agent capabilities mature and getting started information becomes available, we’ll update this page.
 

@@ -17,40 +17,29 @@ Conversion notes:
 
 
 
-# **Lab: Executing a Protocol**
+# Lab: Executing a Protocol
 
 
-## **Overview**
+## Overview
 
 In this lab, we’ll go back to you being the controller. We'll use an OpenAPI/Swagger user interface to allow you to be an Aries agent controller. As well, we’ll use a couple of demo options to ensure you are executing each step of the protocols, and that you are seeing the webhook data that comes back from ACA-Py. In this way, you will be seeing and preparing the data exactly as would a controller.
 
 
-## **How to Run**
+## How to Run
 
 This lab from the ACA-Py repository includes details about running locally using Docker, and on Play with Docker. As always, we recommend running the lab using Docker, so you don’t get bogged down in technical issues unrelated to the lessons of the lab.
 
 
-## **Instructions**
+## Instructions
 
-To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
-
-
-```
-git clone https://github.com/hyperledger/aries-cloudagent-python
-cd aries-cloudagent-python
-```
-
-
-Go to the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AriesOpenAPIDemo.md) in the ACA-Py repository. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and how you would code an application to automate the manual steps in a generalized way. For example:
-
-
+The instructions for this lab can be found [here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AriesOpenAPIDemo.md) in the ACA-Py repository. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and consider how you would code an application to automate the manual steps in a generalized way. For example:
 
 *   If you really were Faber’s controller, how would you handle executing thousands of protocol instances running in parallel between you and all of Faber’s alumni?
 *   How would you interface with Faber College’s backend information systems?
 *   How would you structure Alice’s controller if her Aries agent was running on her phone?
 
 
-## **Takeaways**
+## Takeaways
 
 This lab demonstrates executing the HTTP interfaces used by instances of ACA-Py and their controllers (in this case, you) to execute Aries protocols. It shows: 
 

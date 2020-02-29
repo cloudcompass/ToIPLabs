@@ -17,24 +17,24 @@ Conversion notes:
 
 
 
-# **Lab: Using ACA-Py’s OpenAPI/Swagger Interface**<!-- omit in toc -->
+# Lab: Using ACA-Py’s OpenAPI/Swagger Interface<!-- omit in toc -->
 
-- [**Overview**](#overview)
-- [**How to Run**](#how-to-run)
-- [**Instructions**](#instructions)
+- [Overview](#overview)
+- [How to Run](#how-to-run)
+- [Instructions](#instructions)
   - [Using the OpenAPI Interface](#using-the-openapi-interface)
   - [The Usage Pattern](#the-usage-pattern)
-- [**Try It Out**](#try-it-out)
+- [Try It Out](#try-it-out)
   - [Explore](#explore)
   - [End the Lab](#end-the-lab)
-- [**Takeaways**](#takeaways)
+- [Takeaways](#takeaways)
 
-## **Overview**
+## Overview
 
 In this lab, we'll introduce the ACA-Py OpenAPI/Swagger user interface.
 
 
-## **How to Run**
+## How to Run
 
 This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
 
@@ -43,7 +43,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 *   [Running LFS173x Labs](RunningLabs.md)
 
 
-## **Instructions**
+## Instructions
 
 To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
 
@@ -52,6 +52,7 @@ To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python/demo
 LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber
+
 ```
 
 
@@ -95,7 +96,7 @@ Armed with the basics, we can define the basic pattern for using the tool:
 The mechanical steps are easy. It's the fourth step from the list above that can get tricky. Supplying the right data and, where JSON is involved (for a POST), getting the syntax correct—braces and quotes can be a pain. When the steps don’t work, start your debugging by looking at your JSON. Frequently, the parameters are IDs, and you can get those by copying and pasting the corresponding IDs from message results.
 
 
-## **Try It Out**
+## Try It Out
 
 Here is a sequence of steps you can follow. The guidance will be minimal—use the pattern above to fill in the six substeps of each task. Each endpoint we’ll use is in the “connections” group.
 
@@ -133,7 +134,7 @@ We have another lab using this API to perform the full Alice/Faber exchange.
 To complete the lab, return to the terminal used to start the Faber agent and click Ctrl-C to terminate it.
 
 
-## **Takeaways**
+## Takeaways
 
 The OpenAPI/Swagger interface is a great way to learn about the API that ACA-Py exposes to an agent. Rather than trying to understand the API by reading it, you can experiment with it and try out the endpoints that you are using. You should know the basics of how to use the interface and have a good idea of the core endpoints in a typical ACA-Py agent.
 

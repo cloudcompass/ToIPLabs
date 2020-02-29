@@ -17,31 +17,31 @@ Conversion notes:
 
 
 
-# **Lab: The Aries Toolbox**<!-- omit in toc -->
+# Lab: The Aries Toolbox<!-- omit in toc -->
 
-- [**Overview**](#overview)
-- [**How to Run**](#how-to-run)
-- [**Instructions**](#instructions)
+- [Overview](#overview)
+- [How to Run](#how-to-run)
+- [Instructions](#instructions)
   - [Running Aries Toolbox](#running-aries-toolbox)
   - [Running ACA-Py Agents](#running-aca-py-agents)
   - [Things You Can Do](#things-you-can-do)
   - [Stopping the Lab](#stopping-the-lab)
-- [**Takeaways**](#takeaways)
+- [Takeaways](#takeaways)
 
 
-## **Overview**
+## Overview
 
 In this lab, we'll show you how to start up the Aries Toolbox and connect it with a couple of ACA-Py agents. Oddly, instead of Alice and Faber, we’ll be using agents for Alice and Bob. But that’s OK, only a name has been changed—the concepts are the same!
 
 
-## **How to Run**
+## How to Run
 
 Since Aries Toolbox is an [Electron](https://www.electronjs.org/) app, you must run this lab on your own system—you can’t use Play with Docker.  We’ll still be using Docker for some ACA-Py agents that we’ll connect to the Aries Toolbox, but the Toolbox itself must be run on a local system.
 
 The need to run Aries Toolbox locally will add a new dependency to our list. To run this lab you need to have [nodejs](https://nodejs.org/) and [npm](https://www.npmjs.com/) (node package manager) installed. If you don’t have those installed on your system already, follow the instructions [here](https://www.npmjs.com/get-npm) to install them.
 
 
-## **Instructions**
+## Instructions
 
 Please open up two terminals running bash, and we’ll start in the first.
 
@@ -56,6 +56,7 @@ git clone https://github.com/hyperledger/aries-toolbox
 cd aries-toolbox
 npm i
 npm run dev
+
 ```
 
 
@@ -71,12 +72,15 @@ Get a local clone of the Aries ACA-Py Plugins Toolbox repo and use docker-compos
 git clone https://github.com/hyperledger/aries-acapy-plugin-toolbox
 cd aries-acapy-plugin-toolbox
 docker-compose -f docker-compose_alice_bob.yml up --build
+
 ```
 
 
-If all goes well, you should see on the terminal information in a square box framed in colons (“:”) listing info about Alice and Bob, and below that, invitation URLs. In the version I’m looking at, there are a lot of `Node is not a validator` error messages, which you can ignore.
+If all goes well, you should see on the **terminal** information in a square box framed in colons (“:”) listing info about the agents for Alice and Bob, and below that, invitation URLs. In the version we're looking at, there are a lot of `Node is not a validator` error messages, which you can ignore, but that require you to scroll back a long way to find the first invitation.
 
-Find one of the invitation URLs, highlight and copy the text to your clipboard, paste it into the Aries Toolbox invitations field and click ‘Connect.’ You should see a new connection in the Aries Toolbox window, and a new window for the newly connected agent. Repeat for the second agent (you may have to scroll quite a way in your terminal window).
+Find one of the invitation URLs, highlight and copy the text to your clipboard, paste it into the Aries Toolbox invitations field and click ‘Connect.’ You should see a new connection in the Aries Toolbox window, and after you click "Open", a new window for the newly connected agent. Repeat for the second agent (you may have to scroll quite a way in your terminal window).
+
+You should see a long menu in the left side menu of each agent. If you don't, although the agent did get a connection with the Toolbox, it is not running. If that happens, you should stop (see instructions below) and start the Alice and Bob agents again.
 
 OK, good, you have two Aries agents connected to the Toolbox.
 
@@ -98,7 +102,7 @@ We’ll keep monitoring the Aries Toolbox sites and if tutorials about the Aries
 
 To stop the Aries Toolbox, go to one of the screens and choose the top menu item “File/Quit.” In the first terminal, you will be back at the command line, and you can exit.
 
-To stop the ACA-Py agents, go to the second terminal and: \
+To stop the ACA-Py agents, go to the second terminal and:
 
 
 
@@ -115,7 +119,7 @@ To stop the ACA-Py agents, go to the second terminal and: \
 Exit out of the second terminal session.
 
 
-## **Takeaways**
+## Takeaways
 
 This lab shows one of the new tools created in the Aries community and a new approach to interacting with running agents. There will be more to come with the Aries Toolbox, so keep on it as it evolves!
 

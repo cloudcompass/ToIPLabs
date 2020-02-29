@@ -17,27 +17,27 @@ Conversion notes:
 
 
 
-# **Lab: Aries Protocol Test Suite**
+# Lab: Aries Protocol Test Suite
 
 
-## **Overview**
+## Overview
 
 In this lab, we'll take a look at the Aries Protocol Test Suite.
 
 
-## **How to Run**
+## How to Run
 
 We’ll run this lab from the GitHub repository for the Aries Protocol Test Suite, relying on it for “how to run” guidance.
 
 
-## **Instructions**
+## Instructions
 
-As of the writing of this lab, there is little information on how to run the test suite. As such, there is not a lot to our instructions other than to go to the repository, look around, and if you want to try to run some tests, use the information in the repo. To get to the repository, click [here](https://github.com/hyperledger/aries-protocol-test-suite).
+As of the writing of this lab, there is information on how to start the test suite, but no information on how to run the test suite. As such, there is not a lot to our instructions other than to recommend that you go to the repository, look around, and if you want to try to run some tests, use what guidance you can glean from information and code in the repo. To get to the repository, click [here](https://github.com/hyperledger/aries-protocol-test-suite).
 
 We’ll update the information on this page as we learn more about the test suite and how to use it.
 
 
-## **Takeaways**
+## Takeaways
 
 Since the lab does not have any specific guidance on what to do, the only takeaway is that the Aries Protocol Test Suite repository has been created and that tests are being added to it. As you get deeper into Aries, check back on the test suite, see the progress being made and if you can use it in your day-to-day Aries work.
 

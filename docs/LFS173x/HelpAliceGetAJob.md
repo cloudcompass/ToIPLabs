@@ -17,15 +17,15 @@ Conversion notes:
 
 
 
-# **Lab: Help Alice Get a Job**
+# Lab: Help Alice Get a Job
 
 
-## **Overview**
+## Overview
 
 In this lab you will do some development (yay!) to create a new controller for ACME Corp. You’ll use the Alice and Faber samples to finish a controller that generates an invitation to connect to Alice and then requests proof that she has a degree. Once everything is done, you’ll be able to go through the Alice, Faber and ACME demo from end-to-end.
 
 
-## **How to Run**
+## How to Run
 
 It’s easiest to run this lab locally with Docker so that you have access to your own code editor. However, there is a text editor that you can use with Play with Docker (and vi is also installed) so you can run this exercise in your browser. For general instructions for each, see the following:
 
@@ -34,25 +34,30 @@ It’s easiest to run this lab locally with Docker so that you have access to yo
 *   [Running LFS173x Labs](RunningLabs.md)
 
 
-## **Instructions**
+## Instructions
 
 For this lab, you will need three terminal sessions, one each for Alice, Faber and ACME. As with the other labs, clone the ACA-Py repo in each terminal session (Play with Docker) or once when running locally:
 
 
 ```
 git clone https://github.com/hyperledger/aries-cloudagent-python
-cd aries-cloudagent-python
+cd aries-cloudagent-python/demo
+
 ```
 
 
-The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#coding-challenge-adding-acme), including how to run the ACME agent once you have it running.
+The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AcmeDemoWorkshop.md). Run each of the agents in a terminals as follows:
+
+- Terminal 1 Faber: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber`
+- Terminal 2 Alice: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice`
+- Terminal 3 Acme: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo acme`
 
 Good luck! 
 
 
-## **Takeaways**
+## Takeaways
 
-Instead of just following links and running demos, in this lab you should have been coding. How did it go? Did you get a running agent before clicking the link to the completed version?
+Instead of just following links and running demos, in this lab you should have been coding. How did it go? Did you get a running agent before clicking the [link to the completed version of `acme.py`](https://github.com/ianco/aries-cloudagent-python/blob/agent_workshop/demo/acme.py)?
 
 That's it for this lab! Please return to the course.
 
