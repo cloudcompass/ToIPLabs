@@ -27,14 +27,14 @@ In this lab, we'll show a series of scripts that can be used to write to an Indy
 
 ## How to Run
 
-This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
+This lab can only be run locally with Docker. For general instructions for on running locally with Docker, see the following:
 
-
-
-*   [Running LFS173x Labs](RunningLabs.md)
+*   [Running LFS173x Labs](RunningLabs.md#running-on-docker-locally)
 
 
 ## Instructions
+
+> **NOTE**: As of 2020-March-02, the instructions linked below for this lab are ***NOT*** ready for use. This labs reuses an existing workshop from the VON-Network project and we had not realized the instructions were incomplete. We have now run through the steps of the lab and have it working, but still need to push the revised instructions back into the project. This should happen no later than **2020-March-07**. If you want to be notified when the update is available, please add an issue to this repo, or add a note on the edX forum for the course. We apologize for the inconvenience.
 
 The scenario that we’ll work through in the lab is that you are going to production on a fully permissioned Indy ledger (like the Sovrin MainNet) you need to create some ledger objects (e.g. a schema and credential definition) and you don’t have a DID that is permitted to write to the ledger. In Indy terms, you are a transaction author, and you and a transaction endorser must sign your transactions before they can be written to the ledger.
 
@@ -42,7 +42,7 @@ At the time this process was written it was necessary to do this to get transact
 
 Further, as you do these operations, please note that you are updating your agent’s storage (it’s Indy wallet) and so you must make sure it is preserved. Once the process is complete, the agent that will ultimately use these objects (the DIDs, schema and credential definitions) **must** use the same wallet.
 
-To run the lab, follow the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md). As noted above, you can run the steps in Play with Docker or locally using Docker.
+***STOP*: See NOTE at the top of this section.** To review the steps (but not run) the lab, see the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md). As noted above, these steps must be run with using Docker locally. It does **NOT** work using Play with Docker.
 
 
 ## Takeaways
