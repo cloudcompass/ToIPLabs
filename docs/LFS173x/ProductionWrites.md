@@ -34,22 +34,20 @@ This lab can only be run locally with Docker. For general instructions for on ru
 
 ## Instructions
 
-> **NOTE**: As of 2020-March-02, the instructions linked below for this lab are ***NOT*** ready for use. This labs reuses an existing workshop from the VON-Network project and we had not realized the instructions were incomplete. We have now run through the steps of the lab and have it working, but still need to push the revised instructions back into the project. This should happen no later than **2020-March-07**. If you want to be notified when the update is available, please add an issue to this repo, or add a note on the edX forum for the course. We apologize for the inconvenience.
+You are going to production on a fully permissioned Indy ledger (like the Sovrin MainNet), you need to create some objects on the ledger (e.g. a schema and credential definition), and you don’t have a DID that is permitted to write to the ledger. In Indy terms, you are a transaction author, and you and a transaction endorser must sign your transactions before they can be written to the ledger.
 
-The scenario that we’ll work through in the lab is that you are going to production on a fully permissioned Indy ledger (like the Sovrin MainNet) you need to create some ledger objects (e.g. a schema and credential definition) and you don’t have a DID that is permitted to write to the ledger. In Indy terms, you are a transaction author, and you and a transaction endorser must sign your transactions before they can be written to the ledger.
+As you will see, the process is pretty laborious&mdash;be glad you didn't have to create all the scripts we'll be using! Don’t worry&mdash;the mechanics of doing this have gotten easier since this was put together. However, we think this is a good exercise to go through to understand the interactions that must happen. Even when the process is fully automated (likely through Aries protocols), the steps still have to happen.
 
-At the time this process was written it was necessary to do this to get transactions written to the Sovrin MainNet. Don’t worry—the mechanics of doing this have gotten easier since this was put together. However, we think this is a good exercise to go through to understand the interactions that must happen. Even when the process is fully automated (likely through Aries protocols), the steps still have to happen.
+Further, as you do these operations, please note that you are updating your agent’s storage (it’s Indy wallet) and so you must make sure the wallet is preserved. Once the process is complete, the agent that will ultimately use these objects (the DIDs, schema and credential definitions) **must** use the same wallet. An example is given of how to backup a wallet (using export) as part of the process.
 
-Further, as you do these operations, please note that you are updating your agent’s storage (it’s Indy wallet) and so you must make sure it is preserved. Once the process is complete, the agent that will ultimately use these objects (the DIDs, schema and credential definitions) **must** use the same wallet.
-
-***STOP*: See NOTE at the top of this section.** To review the steps (but not run) the lab, see the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md). As noted above, these steps must be run with using Docker locally. It does **NOT** work using Play with Docker.
+To run the lab, see the [instructions here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md). As noted above, these steps must be run with using Docker locally. It does **NOT** work using Play with Docker.
 
 
 ## Takeaways
 
 In completing this lab you will see the complexity that comes from having a permissioned ledger, where (in some cases) transactions must be signed and written to the ledger by endorsers on behalf of those without write permissions.
 
-As you complete the exercise, consider how this process could be improved (it couldn’t get any worse!). What if both the author and  endorser were agents communicating over DIDComm? What Aries protocols would you define to enable the author and endorser to collaborate?
+As you complete the exercise, consider how this process could be improved (it couldn’t get any worse!). What if both the author and endorser were agents communicating over DIDComm? What Aries protocols would you define to enable the author and endorser to collaborate?
 
 That's it for this lab! Please return to the course.
 
