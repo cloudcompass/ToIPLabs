@@ -36,8 +36,9 @@ As of the writing of this lab, there is little information on how to get started
 
 
 
-*   Open Source Mobile Agent ([OSMA](https://github.com/mattrglobal/osma)) - Xamarin/.Net
+*   Aries MAX ([Aries Mobile Agent Xamarin](https://github.com/hyperledger/aries-mobileagent-xamarin)) - Xamarin/.Net
     *   Based on [aries-framework-dotnet](https://github.com/hyperledger/aries-framework-dotnet), as is the commercial [Streetcred](https://streetcred.id/) iOS and Android Aries mobile agents.
+    *   Formerly called OSMA (Open Source Mobile Agent) and contributed to Hyperledger by [Mattr Global](https://mattr.global)
 *   Aries React-Native Mobile Agent ([ARNIMA](https://github.com/ayanworks/ARNIMA)) - React Native
 *   React Native Indy SDK ([rn-indy-sdk](https://github.com/AbsaOSS/rn-indy-sdk/tree/master)) - React Native
 
