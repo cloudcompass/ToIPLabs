@@ -34,10 +34,8 @@ In this lab we’ll just connect you to the options and you can look at the info
 
 As of the writing of this lab, there is little information on how to get started with the available open source mobile agent repositories. As such, for this lab we’re just providing links to the three repositories for now, and encouraging you to take a look at what’s available. As better examples of these capabilities become available, we’ll update this page with that information.
 
-
-
 *   Aries MAX ([Aries Mobile Agent Xamarin](https://github.com/hyperledger/aries-mobileagent-xamarin)) - Xamarin/.Net
-    *   Based on [aries-framework-dotnet](https://github.com/hyperledger/aries-framework-dotnet), as is the commercial [Streetcred](https://streetcred.id/) iOS and Android Aries mobile agents.
+    *   Based on [aries-framework-dotnet](https://github.com/hyperledger/aries-framework-dotnet), as is the commercial [Trinsic.id](https://trinsic.id/) iOS and Android Aries mobile wallets.
     *   Formerly called OSMA (Open Source Mobile Agent) and contributed to Hyperledger by [Mattr Global](https://mattr.global)
 *   Aries React-Native Mobile Agent ([ARNIMA](https://github.com/ayanworks/ARNIMA)) - React Native
 *   React Native Indy SDK ([rn-indy-sdk](https://github.com/AbsaOSS/rn-indy-sdk/tree/master)) - React Native
