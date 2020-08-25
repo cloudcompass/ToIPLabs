@@ -4,13 +4,11 @@ Welcome to the demonstration section of the Linux Foundation's edX course LF172x
 
 ## Mobile Agent Demonstration
 
-### 2019.12.06: The IIWBook demo is back and running. If you want to try it, go ahead!
+In the first (called "ConfBook"), we use an Aries smartphone wallet to interact with an Aries-based website (with Indy and Ursa embedded, of course) that issues you a verifiable credential, and a second site, also Aries-based, that requests a proof of the credential you have, asks you a question or two, and then issues you a second credential.
 
-In the first (called "IIWBook"), we use an Aries smartphone agent called Streetcred (from [Streetcred.id](Streetcred.id)) to interact with an Aries-based website (with Indy and Ursa embedded, of course) that issues you a verifiable credential, and a second site, also Aries-based, that requests a proof of the credential you have, and then issues you a second credential.
+To see a screencast of an early version of the demo, click [here](https://youtu.be/bZrWAsD42-I). In the screencast, the demo is called "IIWBook" (now called "ConfBook"), and we used the Streetcred wallet, the predecessor of what is now the Trinsic wallet from [trinsic.id](trinsic.id).
 
-To see a screencast of the demo, click [here](https://youtu.be/bZrWAsD42-I).
-
-Want to install the Streetcred agent and run the demo yourself?  Click [here](https://vonx.io/how_to/iiwbook) for instructions on running through the IIWBook process. Please note that currently, there is **only an Apple IOS version** of the mobile agent. We're expecting an Android version to be ready Real Soon Now...
+Want to install an Aries wallet and run the demo yourself?  Click [here](https://vonx.io/how_to/confbook) for instructions on running through the ConfBook process.
 
 ## Web Agent Demonstration
 

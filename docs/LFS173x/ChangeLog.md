@@ -12,6 +12,10 @@ If you are interested in keeping up to date with the content changes, bookmark t
 
 ## Change Log
 
+### 2020.08.24
+
+Changed references to Streetcred to Trinsic to reflect the change in the name of the organization. Other updates to reflect changes to other repositories referenced in the labs.
+
 ### 2020.03.04
 
 Initial version of the course published.

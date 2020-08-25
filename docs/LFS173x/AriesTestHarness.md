@@ -22,7 +22,7 @@ Conversion notes:
 
 ## Overview
 
-In this lab, we'll take a look at the Aries Agent Test Harness.
+In this lab, we'll take a look at the Aries Agent Test Harness that can be used for testing Aries agent interoperability.
 
 
 ## How to Run
@@ -32,14 +32,14 @@ We’ll run this lab from the GitHub repository for the Aries Agent Test Harness
 
 ## Instructions
 
-As of the writing of this lab there is only a little bit of information in the Aries Agent Test Harness repo on how to run through some tests with the test harness. To get to the repository and give it a try, click [here](https://github.com/bcgov/aries-agent-test-harness) and follow the instructions.
-
-We’ll update the information on this page as we learn more about the test harness and how to use it.
-
+All the instructions you need to try out (and even contribute to) the Aries Agent Test Harness are in the repo. Click [here](https://github.com/hyperledger/aries-agent-test-harness) and follow the instructions in the repo's ReadMe to do a quick run of the tests in the harness. You can use Play with Docker and just run the tests in a browser, or run the tests
+on your own system. Check out the rest of the documentation in the repo to learn (lots) more about the test harness, the tests, how to add tests and how to add support for testing
+your own component.
 
 ## Takeaways
 
-Since the lab does not include any specific guidance on what to do, the main takeaway is that the Aries Agent Test Harness repository has been created and that tests are being added to it. As you get deeper into Aries, check back on the test harness to see the progress being made and if you can use it in your day-to-day Aries work.
+The Aries Agent Test Harness (AATH) is a way to create and run interoperability tests across multiple agents and agent frameworks. The tests in the test harness are aligned to the [Aries
+RFCs](https://github.com/hyperledger/aries-rfcs), and test agents and agent frameworks are combined in special code (called a "backchannel") to enable participation in interoperability tests.
 
 That's it for this lab! Please return to the course.
 
