@@ -64,7 +64,7 @@ If you are interested, you can run the tests with a different number of credenti
 
 As we did with the Faber and Alice code, let’s take a quick look at the code for this demo, focusing on the impact of the router in the configuration. The code for the demo is in [performance.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/performance.py). You’ll see it is much like the Alice and Faber code, but with all three controllers run from the same script.
 
-The main thing to note is the minimal impact of the mediator (router) on the code. Scanning the script we can find where the use of the router impacts the code—the places we see `if router` constructs:
+The main thing to note is the minimal impact of the mediator (router) on the code. Scanning the script we can find where the use of the router impacts the code—the places we see `if routing` constructs:
 
 
 
