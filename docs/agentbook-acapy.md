@@ -1,7 +1,8 @@
 # AgentBook - ACA-Py Alice Agent Lab Instructions
 
 This demo shows how pairwise DIDs are used to establish a secure, end-to-end messaging
-connection between two Aries Agents. The demo is part of the Linux Foundation course LFS172x, *Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa* that
+connection between two Aries Agents. The demo is part of the Linux Foundation 
+course LFS172x, *[Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa*](https://www.edx.org/course/introduction-to-hyperledger-sovereign-identity-blockchain-solutions-indy-aries-and-ursa) that
 available on edX.
 
 Pairwise DIDs are the foundation of the DIDComm
