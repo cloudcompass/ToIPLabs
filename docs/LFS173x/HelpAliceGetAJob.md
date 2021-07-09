@@ -48,11 +48,8 @@ cd aries-cloudagent-python/demo
 
 The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AcmeDemoWorkshop.md). Run each of the agents in a terminals as follows:
 
-- Terminal 1 Faber: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber`
-- Terminal 2 Alice: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice`
-- Terminal 3 Acme: `LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo acme`
-
-Good luck! 
+**Note:** As of **2021.07.09**, the Acme initialization code is out of date with the current ACA-Py main branch code. A [PR](https://github.com/hyperledger/aries-cloudagent-python/pull/1289) has been submitted and is pending a change before merging. If that PR has not been merged, you will need
+to make the changes in the PR to get the Acme controller to work.
 
 
 ## Takeaways
