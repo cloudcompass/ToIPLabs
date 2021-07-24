@@ -1,24 +1,4 @@
-<!----- Conversion time: 0.55 seconds.
-
-
-Using this Markdown file:
-
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β18
-* Sat Feb 22 2020 09:33:50 GMT-0800 (PST)
-* Source doc: https://docs.google.com/a/cloudcompass.ca/open?id=1g_joUJvks8aeuM-JHx0MtvKsruFi2-_wQQ8m_O8DIx8
------>
-
-
-
 # Lab: Agent Startup Options
-
 
 ## Overview
 
@@ -69,6 +49,3 @@ While this lab and the command line parameters reviewed are specific to ACA-Py, 
 In later labs, we'll point out where in code the ACA-Py is started to see the command line parameters in effect for that agent instance.
 
 That's it for this lab! Please return to the course.
-
-
-<!-- Docs to Markdown version 1.0β18 -->
