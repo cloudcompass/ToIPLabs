@@ -63,15 +63,12 @@ To use Play with Docker, you must have a modern browser and a free account on [D
 
 To get to a command line for running a lab, do the following:
 
-
-
 *   Go to [https://labs.play-with-docker.com](https://labs.play-with-docker.com/) (called Play with Docker)
 *   Click `Start` and the `+ Add New Instance` to start a terminal window
 
 Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git`, `docker `and `docker-compose`, plus an editor if you want to update files as you experiment.
 
 If instructed to open an additional terminal, hit the `+ Add New Instance` again.
-
 
 #### Ports
 
@@ -90,17 +87,13 @@ Remember that all your files are deleted when your Play with Docker session clos
 
 From time to time, we've found that Play with Docker is not available. The BC Gov team operates a smaller instance of Play with Docker called Play with VON that you might try in those circumstances. Play with VON can be accessed [here](http://play-with-von.vonx.io/).
 
-
 ### Running on Docker Locally
 
 To run the examples locally, open up a `bash` terminal session on your local machine. On Mac and Linux, the default `terminal` apps use bash (or a bash-compatible shell). On Windows, we recommend using `git-bash` that is installed with git on Windows. The labs will not work using Windows `cmd` or `powershell` command lines.
 
-
 #### Prerequisites
 
 When you run the labs locally, you need the following prerequisites installed on your system:
-
-
 
 *   A terminal command line interface running `bash` shell.
 *   Docker, including Docker Compose—Community Edition is fine.
@@ -109,22 +102,18 @@ When you run the labs locally, you need the following prerequisites installed on
 *   Git
     *   [This link](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) provides installation instructions for Mac, Linux (including if you are running Linux using VirtualBox) and native Windows (without VirtualBox).
 
-
 #### Basic Usage
 
 To get to a command line for running a lab, open the (bash) terminal app on your system. If instructed in labs, open up additional terminal sessions/tabs.
 
 Once running a terminal window, follow the specific examples for the lab.
 
-
 #### Ports
 
 The tutorials generally assume that you are running docker on your local system and the ports exposed by the various docker containers are available on `localhost` (for example, `http://localhost:8080`).
 
-
 ### Running on Bare Metal
 
 All of the labs that you can run locally use Docker. You can run the labs directly on your own system without Docker, but we don’t provide instructions for doing that, and we highly recommend you not try that until you have run through them with Docker. Because of differences across systems, it’s difficult to provide universal instructions, and we’ve seen many developers spend far too much time trying to get everything installed and working versus learning from the example.
-
 
 <!-- Docs to Markdown version 1.0β18 -->
