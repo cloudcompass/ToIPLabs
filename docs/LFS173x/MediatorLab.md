@@ -50,21 +50,21 @@ The performance demonstration runs an instance of Alice and Faber, and has Faber
 
 
 ```
-LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance --routing --timing --count 100
+LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance ---mediation --timing --count 100
 
 ```
 
 
 After the run, review the timing output to see both the counts of the controller actions executed and the cumulative time taken for each action. As you scan the numbers, think about how controllers work and the number of actions that were executed. Do those counts make sense, given the number of credentials issued/received? Do the timings make sense? Note the actions that are especially slow. Think about why they would be slow. Likely it's because of the underlying cryptographic actions that are being executed. Notice as well that the total time taken to run the test is less the cumulative time for all the actions. Why? It’s because Faber is issuing multiple credentials in parallel—not waiting for Alice to respond to one before starting the next.
 
-If you are interested, you can run the tests with a different number of credential issuances (by changing the `--count` number) and without the mediator (by removing the `--routing` parameter). The latter change will show you the impact of the mediator.
+If you are interested, you can run the tests with a different number of credential issuances (by changing the `--count` number) and without the mediator (by removing the `--mediation` parameter). The latter change will show you the impact of the mediator.
 
 
 ### Navigating the Code
 
 As we did with the Faber and Alice code, let’s take a quick look at the code for this demo, focusing on the impact of the router in the configuration. The code for the demo is in [performance.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/performance.py). You’ll see it is much like the Alice and Faber code, but with all three controllers run from the same script.
 
-The main thing to note is the minimal impact of the mediator (router) on the code. Scanning the script we can find where the use of the router impacts the code—the places we see `if routing` constructs:
+The main thing to note is the minimal impact of the mediator (router) on the code. Scanning the script we can find where the use of the router impacts the code—the places we see `if mediation` constructs:
 
 
 
