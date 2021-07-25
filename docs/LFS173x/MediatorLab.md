@@ -50,7 +50,7 @@ The performance demonstration runs an instance of Alice and Faber, and has Faber
 
 
 ```
-LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance ---mediation --timing --count 100
+LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance --mediation --timing --count 100
 
 ```
 
