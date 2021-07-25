@@ -24,7 +24,7 @@ This lab from the ACA-Py repository includes details about running the example l
 
 We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo), this time completing the full tutorial.
 
-When we ran this code in an earlier lab, we linked to the specific lines of controller code that handled the early part of the demo. Here are the key elements of the credential exchange handling within the controllers. Recall that the actual calls to the` indy-sdk` are embedded in ACA-Py, and the controller just has to use the REST API exposed by the API agent to trigger and handle the agent-related actions.
+When we ran this code in an earlier lab, we linked to the specific lines of controller code that handled the early part of the demo. Here are the key elements of the credential exchange handling within the controllers. Recall that the actual calls to the `indy-sdk` are embedded in ACA-Py, and the controller just has to use the REST API exposed by the API agent to trigger and handle the agent-related actions.
 
 **Note:** _The links to specific lines in the code go to a specific version of the file in GitHub that may not be the latest. As such, the line numbers in GitHub may be slightly different than what is on your system (the latest version)._
 
@@ -37,7 +37,7 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
 #### Issuer Initialization
 
 - Faber [registers a DID on the ledger](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L132), as required of a verifiable credential issuer.
-  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/support/agent.py#L204) to call ACA-Py to register the DID.	
+  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/support/agent.py#L204) to call ACA-Py to register the DID.
     - Note in the method the use of environment variables (e.g. “LEDGER_URL”) and the default that we are using is a local VON Network (the reference to port 9000).
     - The controller assumes the ledger has a “/register” endpoint for registering a DID, which is a specific feature of the VON Network.
     - We cover in the edX LFS173x, Becoming an Aries Developer course, initialization for production ledgers where those assumptions are removed.
