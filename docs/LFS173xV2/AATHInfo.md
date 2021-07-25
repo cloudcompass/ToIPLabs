@@ -6,7 +6,7 @@ In this lab we'll look at the Aries Interop Profile information page. This page 
 
 ## How to Run
 
-Nothing tricky here...you just need to click on some links on a couple of websites. Of course, those that want to go above and beyond might want to really dig into a failure, look at the code, engage with the Aries Agent Test Harness team, and perhaps open an issue about a failure--or even submit a Pull Request. Your choice! 
+Nothing tricky here...you just need to click on some links on a couple of websites. Of course, those that want to go above and beyond might want to really dig into a failure, look at the code, engage with the Aries Agent Test Harness team, and perhaps open an issue about a failure--or even submit a Pull Request. Your choice!
 
 ## Instructions
 
@@ -16,7 +16,7 @@ Nothing tricky here...you just need to click on some links on a couple of websit
 ## Takeaways
 
 Interoperability is crucial to Aries deployments. One organization can't (and shouldn't!) build everything in the Aries ecosystem,
-so it is crucial there are ways to verify interoperability and to see the status of that verification. The https://aries-interop.info site
+so it is crucial there are ways to verify interoperability and to see the status of that verification. The [https://aries-interop.info](https://aries-interop.info) site
 makes it possible to see on an ongoing basis just what that status is. If you are working on Aries, we recommend bookmarking this page
 and checking it from time to time to see what is happening in the ecosystem.
 
