@@ -4,41 +4,54 @@
 
 In this lab, we'll demonstrate how to see the current list of ACA-Py parameters for both the `provision` and `start` modes of operation.
 
-
 ## How to Run
 
 This lab can be run locally with Docker or on Play with Docker in your browser. For general instructions for each, see the following:
 
-
-
-*   [Running LFS173x Labs](RunningLabs.md)
-
+- [Running LFS173x Labs](RunningLabs.md)
 
 ## Instructions
 
 For this lab, we are going to use [these instructions in the ACA-Py repository](https://github.com/hyperledger/aries-cloudagent-python/blob/master/DevReadMe.md#configuring-aca-py-command-line-parameters) to review the current set of command line parameters for ACA-Py. To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
 
-
-```
+```bash
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python
 
 ```
 
-
 Because the list of ACA-Py start up parameters is evolving regularly, the documentation for the list is in code instead of in documentation. As such, rather than list the parameters here, or even in the ACA-Py repo, you must run ACA-Py commands to see the current list of parameters.
 
-Use the instructions here in the ACA-Py repo to run an ACA-Py docker image and see the startup parameters. Here is an example of the first command to run:
+Use the instructions here in the ACA-Py repo to run an ACA-Py docker image and see the startup parameters. Here is an example of the first command to run, to see the version of ACA-Py you are running.
 
+```bash
+scripts/run_docker --version
 
 ```
-scripts/run_docker --help
+
+When you run that, you will see that an ACA-Py docker image is first built, which could take a while on the first run. On subsequent runs, the build step will be pretty quick.
+
+To see the options for `provision` and `start`, use these commands:
+
+```bash
+scripts/run_docker provision --help
 
 ```
 
+```bash
+scripts/run_docker start --help
 
-The other commands to run for this lab to see all of the command line parameters are provided in the ACA-Py document.
+```
 
+There are a lot of options! Note the environment variables that you can use as an alternative to using the command line options. And don't forget
+about using an ACA-Py config YAML file. So many options for options!
+
+One more thing for those that might be interested. To see how to build ACA-Py, we can take a look at the dockerfile used by the `run_docker` script by running this command:
+
+```bash
+cat docker/Dockerfile.run
+
+```
 
 ## Takeaways
 
