@@ -66,14 +66,10 @@ As we did with the Faber and Alice code, let’s take a quick look at the code f
 
 The main thing to note is the minimal impact of the mediator (router) on the code. Scanning the script we can find where the use of the router impacts the code—the places we see `if mediation` constructs:
 
+*   Instantiating and starting the router (mediator) controller - [line 310](https://github.com/hyperledger/aries-cloudagent-python/blob/34c554440c6eb05c671ffa827b3a72075486e0ae/demo/runners/performance.py#L310)
+*   Having Alice’s agent connect with the router agent - [line 339](https://github.com/hyperledger/aries-cloudagent-python/blob/34c554440c6eb05c671ffa827b3a72075486e0ae/demo/runners/performance.py#L339)
 
-
-*   Instantiating the router (mediator) controller - [line](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/performance.py#L237)
-*   Starting the router ACA-Py process - line 245
-*   Having Alice’s agent connect with the router agent - line 256
-*   Having Alice’s agent add the router key data when connecting to Faber - line 263
-
-After that, the Faber and Alice controllers don’t do anything differently—the rest of the controller code is the same with or without the mediator. Thus, Faber controller is unchanged, while the Alice controller has just two changes to account for the use of a mediator. Faber’s ACA-Py instance does behave differently (wrapping the message for Alice twice, and sending to the mediator), but that is invisible to the Faber controller. Likewise, Alice’s ACA-Py instance receives messages from the mediator, but again, that’s invisible to Alice’s controller.
+After that, the Faber and Alice controllers don’t do anything differently—the rest of the controller code is the same with or without the mediator. Thus, Both Faber and Alice controllers have just two changes to account for the use of a mediator. Faber’s ACA-Py instance behaves differently (wrapping the message for Alice twice, and sending to the mediator), but that is invisible to the Faber controller. Likewise, Alice’s ACA-Py instance receives messages from the mediator, but again, that’s invisible to Alice’s controller.
 
 The underlying message? Adding in mediators has a small impact on the controller that is going to use the mediator, but has no impact on anything else. Routing with mediators is handled at the messaging envelope protocol layer (DIDComm) without affecting the higher level Aries protocols.
 
