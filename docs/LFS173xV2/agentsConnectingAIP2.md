@@ -19,7 +19,7 @@ This lab from the ACA-Py repository includes details about running the example l
 We're going to use the same instructions (below) as we used for the last lab, but when starting the Faber agent, please use the following command, with the extra option:
 
 ```bash
-./run_demo faber --did-exchange
+./run_demo faber --did-exchange --aip 20
 
 ```
 
