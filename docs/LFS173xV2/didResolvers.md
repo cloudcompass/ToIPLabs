@@ -14,11 +14,12 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-We're going to start this lab in a browser, using the [DIF Uni Resolver](https://resolver.identity.foundatio). The website is a
-deployment of the [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver/) open source project.
-The project allows anyone that has specified and [registered at W3C](https://w3c.github.io/did-spec-registries/#did-methods)
-a DID Method to create a docker container image that implements a resolver for the DID Method. Each DID Method resolver
-container implements the same API, so that a universal resolver engine can receive a DID to be resolved, figure out the resolver to call, call it and receive back the resulting DID.
+We're going to start this lab in a browser by going to the [DIF Resolver](https://resolver.identity.foundation) website.
+The website is a deployed instance of the [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver/)
+open source project, which aims to enable the resolution of all publicly accessible DIDs.
+Entities that specify, implement and [register at W3C](https://w3c.github.io/did-spec-registries/#did-methods)
+a DID Method can contribute a resolver for their DID Method to the Universal Resolver project.
+Given a DID of any supported DID Method, an instance of the Universal Resolver returns the DIDDoc and DID Metadata (if any) associated with the DID.
 
 Before we start resolving DIDs, click on the orange warning icon on the top left of the page and read the caveats. As of writing
 this (mid-2021) there are two. The first ("DIDs are evolving...") is becoming less and less of a concern as time
