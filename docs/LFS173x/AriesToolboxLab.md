@@ -70,9 +70,8 @@ Get a local clone of the Aries ACA-Py Plugins Toolbox repo and use docker-compos
 
 ```
 git clone https://github.com/hyperledger/aries-acapy-plugin-toolbox
-cd aries-acapy-plugin-toolbox
-docker-compose -f docker-compose_alice_bob.yml up --build
-
+cd aries-acapy-plugin-toolbox/demo
+docker-compose -f docker-compose.alice-bob.yml up --build
 ```
 
 
