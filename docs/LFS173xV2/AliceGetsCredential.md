@@ -36,36 +36,38 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
 
 #### Issuer Initialization
 
-- Faber [registers a DID on the ledger](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L132), as required of a verifiable credential issuer.
-  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/support/agent.py#L204) to call ACA-Py to register the DID.
+- Faber [creates a wallet](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/faber.py#L151), with a Public DID as needed by a Verifiable Credential Issuer.
+  - Note the handling for using an agent with a single wallet, or a multi-tenant wallet, where the agent has many wallets, one per entity using the service. We're not using that...for now.
+  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L402) to call ACA-Py to register a wallet.
+- In creating the Faber wallet, [create Faber's DID](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L466)
+  - Method to [create the DID](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L360)
     - Note in the method the use of environment variables (e.g. “LEDGER_URL”) and the default that we are using is a local VON Network (the reference to port 9000).
     - The controller assumes the ledger has a “/register” endpoint for registering a DID, which is a specific feature of the VON Network.
     - We cover in the edX LFS173x, Becoming an Aries Developer course, initialization for production ledgers where those assumptions are removed.
-  - [Generate a random seed](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/support/agent.py#L122) for the agent.
+  - [Call to self.seed to generate a random seed](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L180) for the agent.
     - Allows us to run the demo many times on the same ledger with the same schema and credential definition versions.
-- Faber [registers a schema and credential definition](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L140) on the ledger.
-  - Sets the schema version using random numbers.
-  - Sets the schema attributes with name, date, etc.
-  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/support/agent.py#L136) to call ACA-Py to register the schema and cred def.
-    - “... await self.admin_POST …” is the REST call to ACA-Py.
+- Faber [registers a schema and credential definition](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/faber.py#L160) on the ledger.
+  - Container [agent method call](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/agent_container.py#L518) to create the objects.
+    - Sets the schema version using random numbers.
+  - [Attributes in the schema](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/agent_container.py#L1153) Faber creates
+  - [Method in agent.py](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L217) to call ACA-Py to register the schema and cred def.
+    - “... await self.admin_POST …” are the REST calls to ACA-Py.
 
 #### Request From User to Issue Credential
 
-- Faber [handles the request](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L182) from the user to issue a credential.
-  - Prepare the claims for the credential.
+- Faber [handles the request](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/faber.py#L173) from the user to issue a credential.
+  - Prepare the claims for the credential -- inline!
     - In a real system, this data would be a lookup into Faber’s Student Information System based on an input about who was asking for a credential.
-  - “cred_preview = …” construct the values to be sent.
-  - “offer_request = …” prepare to send the request to Alice.
-    - Note that the “connection_id” setting is hard coded - Faber only talks to Alice. That’s not very realistic!
-    - In a real system, this is likely passed in as part of the “issue a credential” external event such as a web request.
-  - “await agent.admin_POST…” send the credential offer to start the issue credential Aries protocol.
-- Faber method to [issue the credential](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L60):
-  - “cred_preview = …”  collect the passed in credential attributes
-  - “await self.admin.POST…” initiate the “issue credential” Aries protocol ([RFC 0036](https://github.com/hyperledger/aries-rfcs/tree/master/features/0036-issue-credential))
+  - Note the handling for AIP 1.0 and AIP 2.0. The differences are minimal. We're using AIP 1.0 in this run through.
+    - “cred_preview = …” construct the values to be sent.
+    - “offer_request = …” prepare to send the request to Alice.
+      - Note that the “connection_id” setting is hard coded - Faber only talks to Alice. That’s not very realistic!
+      - In a real system, this is likely passed in as part of the “issue a credential” external event such as a web request.
+    - “await faber_agent.agent.admin_POST…” to initiate the AIP 1.0 “issue credential” Aries protocol ([RFC 0036](https://github.com/hyperledger/aries-rfcs/tree/master/features/0036-issue-credential)).
 
 #### Request From User to Send Proof Request
 
-- Faber [handles the request](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/faber.py#L210) from the user to request a proof from Alice.
+- Faber [handles the request](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/faber.py#L281) from the user to request a proof from Alice.
 - Proof Request creation:
   - “req_attrs = …” specify restrictions that the claims must come from credentials issued by Faber’s DID.
     - Post Indy version 1.14, those claims can be group to a single restriction that would also require that the claims come from the same credential, versus (in this case) any credential issued by Faber’s DID.
@@ -78,17 +80,19 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
 
 #### Credential Offer Received
 
-- Alice’s [handler](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/alice.py#L59) for a webhook notification related to the issue credential protocol.
+- Alice's agent uses the Agent container [handler](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/agent_container.py#L119) for a webhook notification related to the AIP 1.0 issue credential protocol.
   - “state = …” get information about the instance of the protocol, including the state, the ID of the instance.
   - “if state == "offer_received"...” immediately send back a credential request response by invoking ACA-Py.
     - A real agent might popup a UI for Alice to see if she is interested in the credential offer that was received. Or maybe not. Since you are writing the controller, it can do whatever it needs to do to meet the business requirements.
   - “elif state == "credential_acked"...” handle the credential received event.
     - ACA-Py has already stored the credential in Alice’s wallet.
   - “resp = await …” invoke the ACA-Py REST endpoint to get the data from the credential back using the credential_id provided in the webhook and print the data to the log.
+  - "state == "request_received"..." is not for Alice (the Holder), it's for Faber (the Issuer). In this demo agent implementation, the handling for the issuer and holder are together.
+  - Note that the AIP 2.0 version of "issue_credential" protocol is handled in the next method.
 
 #### Proof Request Received
 
-- Alice’s [handler](https://github.com/hyperledger/aries-cloudagent-python/blob/ab8097d199ae07a31459509eec007451483526e3/demo/runners/alice.py#L94) for a webhook notification related to the present proof protocol.
+- As with issue, Alice's agent uses the Agent container [handler](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/agent_container.py#L245) for a webhook notification related to the present proof protocol.
   - “state = …” get information about the instance of the protocol, including the state, the ID of the instance.
   - “if state == "request_received"...” start of processing to prepare the proof.
     - A real agent might popup a UI for Alice to see if she is interested in responding to the proof request.
@@ -101,7 +105,9 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
   - “request = …“ combine the data into the “proof” data structure.
   - “await self.admin_POST …” invoke ACA-Py via the REST API endpoint to send the proof to the requesting agent (Faber, in this case).
     - The presentation_exchange_id links the response to the protocol instance request.
-
+  - "state == "presentation_received"..." is not for Alice (the Holder/Prover), it's for Faber (the Verifier). In this demo agent implementation, the handling for the verifier and holder/prover are together.
+  - Note that the AIP 2.0 version of "handle_present_proof" protocol is handled in the next method.
+  
 While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [issue credential](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/issue_credential) and [present proof](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/present_proof) protocol handlers. Look into the “v1.0” folder for the Python code. And of course, those really interested can drill down into the Indy SDK, and even deeper into Ursa.
 
 ## Takeaways
