@@ -20,7 +20,6 @@ Since Aries Toolbox is an [Electron](https://www.electronjs.org/) app, you must 
 on Play-with-Docker as we've seen before.
 
 Note: As of writing this, the Aries Toolbox does not run on Apple M1 Silicon device, such as the recent MacBook Airs. Follow the status of that issue [here](https://github.com/hyperledger/aries-toolbox/issues/218).
-Note: As of writing, there is a bug such that drop-down boxes on the Aries Toolbox are not working properly. Follow the status of that issue [here](https://github.com/hyperledger/aries-toolbox/issues/228).
 
 ### Installing node and npm
 
