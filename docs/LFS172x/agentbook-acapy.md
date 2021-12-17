@@ -23,9 +23,10 @@ For this demo we'll use [Play with Docker](https://labs.play-with-docker.com) a 
 - Click `Start` and the `+ Add New Instance` to start a terminal window
 - In the terminal window, copy, paste and execute the following commands:
 
-```
+``` bash
 git clone https://github.com/hyperledger/aries-cloudagent-python
 cd aries-cloudagent-python/demo/
+git checkout tags/0.5.6 -b b0.5.6
 LEDGER_URL=http://dev.bcovrin.vonx.io ./run_demo alice
 ```
 
@@ -58,3 +59,5 @@ In that demo you saw two agents establishing a connection and then using the `Tr
 Source code to review:
 
 - Aries Cloud Agent - Python and the Alice agent: [https://github.com/hyperledger/aries-cloudagent-python](https://github.com/hyperledger/aries-cloudagent-python) - `/demo` folder.
+
+Note: This is a pretty old demo (especially AgentBook -- it's ancient in SSI terms!), so the code we are using in Aries Cloud Agent Python is an old version (Release 0.5.6). Something has changed in the ACA-Py Alice/Faber demo that is not compatible with AgentBook that we've not looked into.
