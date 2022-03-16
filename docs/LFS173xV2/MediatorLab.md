@@ -23,7 +23,7 @@ cd aries-cloudagent-python/demo
 The performance demonstration runs an instance of Alice and Faber, and has Faber issue a number of credentials to Alice, one after another. Then, each agent publishes timing information about the calls executed and the time taken for those calls. Optionally, you can run the test with a mediator, which is what we’ll do first. To run the test execute this command:
 
 ```bash
-LEDGER_URL=http://greenlight.bcovrin.vonx.io ./run_demo performance --mediation --timing --count 100
+LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo performance --mediation --timing --count 100
 
 ```
 

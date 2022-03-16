@@ -8,7 +8,7 @@ In the first (called "ConfBook"), we use an Aries smartphone wallet to interact 
 
 To see a screencast of an early version of the demo, click [here](https://youtu.be/bZrWAsD42-I). In the screencast, the demo is called "IIWBook" (now called "ConfBook"), and we used the Streetcred wallet, the predecessor of what is now the Trinsic wallet from [trinsic.id](trinsic.id).
 
-Want to install an Aries wallet and run the demo yourself?  Click [here](https://vonx.io/how_to/confbook) for instructions on running through the ConfBook process.
+Want to install an Aries wallet and run the demo yourself?  Click [here](https://digital.gov.bc.ca/digital-trust/projects-and-initiatives/conference-book-demo/) for instructions on running through the ConfBook process.
 
 ## Web Agent Demonstration
 
