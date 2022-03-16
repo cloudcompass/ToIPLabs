@@ -29,7 +29,6 @@ This page contains general instructions for running labs for the edX LFS173x cou
     - [Basic Usage](#basic-usage)
     - [Ports](#ports)
     - [Editing Files](#editing-files)
-    - [Play with VON](#play-with-von)
   - [Running on Docker Locally](#running-on-docker-locally)
     - [Prerequisites](#prerequisites-1)
     - [Basic Usage](#basic-usage-1)
@@ -84,12 +83,6 @@ If you need to edit files when using Play with Docker, you can use `vi` from the
 > **WARNING**: There was (and may still be) a bug with the Play with Docker GUI editor whereby the last few characters of an edited file were truncated. Be careful when using the editor for that behaviour.
 
 Remember that all your files are deleted when your Play with Docker session closes, so if you do want to preserve your files, make sure you grab them before you exit.
-
-
-#### Play with VON
-
-From time to time, we've found that Play with Docker is not available. The BC Gov team operates a smaller instance of Play with Docker called Play with VON that you might try in those circumstances. Play with VON can be accessed [here](http://play-with-von.vonx.io/).
-
 
 ### Running on Docker Locally
 
