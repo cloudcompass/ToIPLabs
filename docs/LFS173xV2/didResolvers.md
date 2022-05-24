@@ -14,7 +14,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-We're going to start this lab in a browser by going to the [DIF Resolver](https://resolver.identity.foundation) website.
+We're going to start this lab in a browser by going to the [DIF Resolver](https://dev.uniresolver.io/) website.
 The website is a deployed instance of the [DIF Universal Resolver](https://github.com/decentralized-identity/universal-resolver/)
 open source project, which aims to enable the resolution of all publicly accessible DIDs.
 Entities that specify, implement and [register at W3C](https://w3c.github.io/did-spec-registries/#did-methods)
