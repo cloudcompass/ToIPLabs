@@ -19,8 +19,6 @@ In this lab, we'll show you how to start up the Aries Toolbox and connect it wit
 Since Aries Toolbox is an [Electron](https://www.electronjs.org/) app, you must run at least part of this lab on your own system. The second element of this lab, the actual agents for Alice and Bob, can run on your local machine with Docker or
 on Play-with-Docker as we've seen before.
 
-Note: As of writing this, the Aries Toolbox does not run on Apple M1 Silicon device, such as the recent MacBook Airs. Follow the status of that issue [here](https://github.com/hyperledger/aries-toolbox/issues/218).
-
 ### Installing node and npm
 
 The need to run Aries Toolbox locally will add a new dependency to our list. To run this lab you need to have [nodejs](https://nodejs.org/) and [npm](https://www.npmjs.com/) (node package manager) installed. If you don’t have those installed on your system already, here is some guidance on installing them on different systems:
