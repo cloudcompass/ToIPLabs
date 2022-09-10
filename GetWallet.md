@@ -1,3 +1,5 @@
+# Getting an Aries Mobile Wallet
+
 Need a mobile wallet app for working with production and proof of concept applications? Use these instructions to get a compatible wallet on your phone that can receive, hold and prove your verifiable credentials. There are currently these options:
 
 - [BC Wallet](#bc-wallet)
@@ -14,8 +16,6 @@ Need a mobile wallet app for working with production and proof of concept applic
 The BC Wallet comes pre-configured to work with the ledgers you are likely to encounter in running
 PoCs and production applications from BC Gov. The Wallet is intended primarily for the use of residents
 of BC, but is available to anyone as a general purpose Aries wallet.
-
-That's it for the special instructions! Please return to the instructions for application you are using.
 
 ## Trinsic Wallet
 
@@ -35,8 +35,6 @@ After installing and opening the mobile wallet, follow the instructions to confi
   - If you are using a proof-of-concept app that instructs you to use the BCovrin test ledger, select "BCovrin Test"
 - Click the back arrow to return to the settings and again to return to the main app screen.
 
-That's it for the special instructions! Please return to the instructions for application you are using.
-
 ## esatus Wallet
 
 [esatus AG](https://esatus.com) ([English site](https://esatus.com/?lang=en)) provides compatible Wallets for both iOS and Android. To use the app you need to install the app and do some initial setup. Please follow the setup instructions below after you install and open the esatus app.
@@ -55,8 +53,6 @@ After installing and opening the mobile wallet, follow the instructions to confi
   - If you are using a proof-of-concept service that instructs you to use the BCovrin test ledger, select "BCGov Test Ledger"
 - Click the back arrow to return to the settings and again to return to the main app screen.
 
-That's it for the special instructions! Please return to the instructions for application you are using.
-
 ## Lissi Wallet
 
 [Lissi](https://lissi.id/) by the [main incubator GmbH](https://main-incubator.com/) ([main incubator - EN](https://main-incubator.com/en/home/)) provides a compatible wallet for both iOS and Android. To use the app you need to install the app from the App- or Play Store. Please follow the setup instructions below for the initial setup:
@@ -70,5 +66,3 @@ The BC Wallet comes pre-configured to work with the ledgers you are likely to en
 PoCs and production applications. The LISSI wallet contains some interesting "verify the verifier"
 capabilities that provide feedback about sites that the LISSI team has reviewed and deemed safe for
 wallet users.
-
-That's it for the special instructions! Please return to the instructions for application you are using.

@@ -90,7 +90,7 @@ There are not currently a lot of instructions on what you can do with the Aries 
   - The Aries Toolbox uses the Sovrin BuilderNet network by default. To issue credentials, the issuer must:
     - Accept the Sovrin BuilderNet Transaction Author Agreement
     - Use the [Sovrin Self-Service](https://selfserve.sovrin.org/) to write an Endorser DID to the ledger.
-- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](../../GetWallet.md) ).
+- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](../../GetWallet.md)).
 
 We’ll keep monitoring the Aries Toolbox sites and if tutorials about the Aries Toolbox are posted, we’ll link to them from here.
 
