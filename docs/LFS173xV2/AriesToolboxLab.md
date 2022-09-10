@@ -87,10 +87,10 @@ There are not currently a lot of instructions on what you can do with the Aries 
 - Use the “Invitations” menu item in the Alice window to create and copy an invitation, and paste it into the appropriate field in the “Connections” menu item of Bob’s window. That should enable a connection between Alice and Bob.
 - Find the DIDs that Alice and Bob are using for connections to each other and “Activate” those connections from the “Connections” menu item.
 - Play around with the Credentials section. For example, have Alice create a schema and a credential definition and issue a credential to Bob. Further, have Alice request a proof request from Bob about that credential.
-  - The Aries Toolbox uses the Sovrin Staging network by default. To issue credentials, the issuer must:
-    - Accept the Sovrin Staging Transaction Author Agreement
+  - The Aries Toolbox uses the Sovrin BuilderNet network by default. To issue credentials, the issuer must:
+    - Accept the Sovrin BuilderNet Transaction Author Agreement
     - Use the [Sovrin Self-Service](https://selfserve.sovrin.org/) to write an Endorser DID to the ledger.
-- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](https://vonx.io/getwallet)).
+- Create an invitation, display its QR code and scan it with one of the mobile wallet apps (one of those listed [here](../../GetWallet.md)).
 
 We’ll keep monitoring the Aries Toolbox sites and if tutorials about the Aries Toolbox are posted, we’ll link to them from here.
 
