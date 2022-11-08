@@ -1,6 +1,6 @@
 # Hyperledger Indy, Aries and Ursa Demonstrations
 
-Welcome to the demonstration section of the Linux Foundation's edX course LF172x, Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa. In this section we have two demonstrations of Indy, Aries and Ursa technology.
+Welcome to the demonstration section of the Linux Foundation's edX course LFS172x, Introduction to Hyperledger Sovereign Identity Blockchain Solutions: Indy, Aries and Ursa. In this section we have two demonstrations of Indy, Aries and Ursa technology.
 
 ## Mobile Agent Demonstration
 
