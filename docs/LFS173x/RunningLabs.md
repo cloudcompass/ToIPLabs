@@ -52,10 +52,12 @@ In many of the labs we will let you know that you have the option of running the
 
 [Play with Docker](https://labs.play-with-docker.com/) is a tool from [Docker, Inc.](https://docker.com/) that allows you to access a Linux command line on which you can run docker scripts in your browser. The environment is temporary (lasting up to 4 hours) and should not be used for development, but it is a great playground for playing with open source software examples without having to add anything to your own system.
 
+If you choose this option, everything runs in your browser, and you don't need to do any software downloads and installs on your own system.
+
 
 #### Prerequisites
 
-To use Play with Docker, you must have a modern browser and a free account on [Docker Hub](https://hub.docker.com/).
+To use Play with Docker, you must have a modern browser and a free account on [Docker Hub](https://hub.docker.com/). If you don't have a Docker Hub account, please create one now.
 
 
 #### Basic Usage
