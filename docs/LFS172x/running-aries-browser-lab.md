@@ -1,20 +1,20 @@
-# Hyperledger Indy, Aries and Ursa Demonstrations
+# Hyperledger Indy, Aries, AnonCreds, and Ursa Demonstrations
 
 Welcome to the demonstration section of the Linux Foundation's edX course
 [LFS172x, Introduction to Hyperledger Self Sovereign Identity Blockchain
 Solutions](https://www.edx.org/course/identity-in-hyperledger-aries-indy-and-ursa).
-In this section we have several demonstrations of Indy, Aries, AnonCreds and Ursa
+In this section we have several demonstrations of Indy, Aries, AnonCreds, and Ursa
 technology.
 
 ## Mobile Wallet Demonstration
 
 We'll start with downloading a published Aries mobile wallet from one of the
 mobile OS App stores. Then, we'll run through some guided use cases of receiving
-some AnonCreds credentials into the wallet, and presenting them to accomplish
-some business goal. The scenarios are built on a (very cool!) open source
-verifiable credentials demo framework created by the team at [Animo
-Solutions](https:animo.id). The [BC
-Wallet](https://digital.gov.bc.ca/digital-trust/projects-and-initiatives/bc-wallet-technology-overview/)
+some AnonCreds credentials (rooted in Indy ledgers) into the wallet, and presenting
+them to accomplish some business goal. The scenarios are built on a (very cool!)
+open source verifiable credentials demo framework created by the team at
+[Animo Solutions](https:animo.id). The
+[BC Wallet](https://digital.gov.bc.ca/digital-trust/projects-and-initiatives/bc-wallet-technology-overview/)
 team at the Government of British Columbia used the framework to build a
 showcase for their digital wallet.
 
