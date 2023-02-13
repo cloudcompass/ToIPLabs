@@ -34,6 +34,11 @@ LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber
 
 An instance of the Faber agent will start, initialize, generate and print an invitation. We’ve seen that before. For this case, we’re going to ignore the command line and open up port 8021 in a browser using the “8021” link in the header if you are on Play with Docker, or [http://localhost:8021/](http://localhost:8021/) if you are running locally. Either option should open a web page labelled “Faber Agent” with a long list of HTTP actions (GETs and POSTs). This is the OpenAPI/Swagger interface for the Faber ACA-Py instance that you started. Let’s explore what we can do.
 
+<details>
+    <summary>Show me a screenshot!</summary>
+    <img src="https://raw.githubusercontent.com/hyperledger/aries-cloudagent-python/main/demo/collateral/Faber-Agent.png" alt="Swagger Page for Faber Agent">
+</details>
+
 ### Using the OpenAPI Interface
 
 The ACA-Py endpoints are in labelled groups (“server”, “action-menu”, “present-proof”, and so on), each with member endpoints (e.g. “/plugins” , “/status”, “/status/reset” and “/features” in the server group). Each of the endpoints are HTTP requests that your controller can make to an ACA-Py instance. This interface can be used as you develop your controller to experiment with each of the endpoints.

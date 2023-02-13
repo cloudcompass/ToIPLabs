@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lab you will do some development (yay!) to create a new controller for ACME Corp. You’ll use the Alice and Faber samples to finish a controller that generates an invitation to connect to Alice and then requests proof that she has a degree. Once everything is done, you’ll be able to go through the Alice, Faber and ACME demo from end-to-end.
+In this lab you will do some development (yay!) to create a new controller for ACME Corp. You’ll use the Alice and Faber samples to finish a controller that generates an invitation to connect to Alice and then requests proof that she has a degree. Once everything is done, you’ll be able to go through the Alice, Faber, and ACME demo from end-to-end.
 
 ## How to Run
 
@@ -20,7 +20,7 @@ cd aries-cloudagent-python/demo
 
 ```
 
-The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AcmeDemoWorkshop.md).
+The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AcmeDemoWorkshop.md).
 
 ## Takeaways
 

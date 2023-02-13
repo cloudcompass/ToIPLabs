@@ -1,6 +1,10 @@
 # General Instructions for Running Labs<!-- omit in toc -->
 
-This page contains general instructions for running labs for the edX LFS173x course. We'll provide a link to this page in most labs to give you some context in completing the labs.
+This page contains general instructions for running labs for the [Linux
+Foundation's edX LFS173x Becoming an Aries
+Developer](https://www.edx.org/course/becoming-a-hyperledger-aries-developer)
+online course. We'll provide a link to this page in most labs to give you some
+context in completing the labs.
 
 - [Labs Content](#labs-content)
 - [Running Options: Play with Docker and Locally with Docker](#running-options-play-with-docker-and-locally-with-docker)
@@ -29,7 +33,7 @@ In many of the labs we will let you know that you have the option of running the
 
 [Play with Docker](https://labs.play-with-docker.com/) is a tool from [Docker, Inc.](https://docker.com/) that allows you to access a Linux command line on which you can run docker scripts in your browser. The environment is temporary (lasting up to 4 hours) and should not be used for development, but it is a great playground for playing with open source software examples without having to add anything to your own system.
 
-#### Play WIth Docker Prerequisites
+#### Play With Docker Prerequisites
 
 To use Play with Docker, you must have a modern browser and a free account on [Docker Hub](https://hub.docker.com/).
 
@@ -40,7 +44,7 @@ To get to a command line for running a lab, do the following:
 - Go to [https://labs.play-with-docker.com](https://labs.play-with-docker.com/) (called Play with Docker)
 - Click `Start` and the `+ Add New Instance` to start a terminal window
 
-Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git`, `docker `and `docker-compose`, plus an editor if you want to update files as you experiment.
+Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git` and `docker`, plus an editor if you want to update files as you experiment.
 
 If instructed to open an additional terminal, hit the `+ Add New Instance` again.
 
@@ -51,8 +55,6 @@ Play with Docker automatically exposes publicly-accessible ports from running do
 #### Editing Files
 
 If you need to edit files when using Play with Docker, you can use `vi` from the terminal command line, or there is a browser based file explorer and GUI editor. To get to that, click the `Editor` button in the header section and a window will popup. Enlarge the window and use the file explorer to find the file you want to edit. Double click on the file and you will be in the editor.
-
-> **WARNING**: There was (and may still be) a bug with the Play with Docker GUI editor whereby the last few characters of an edited file were truncated. Be careful when using the editor for that behavior.
 
 Remember that all your files are deleted when your Play with Docker session closes, so if you do want to preserve your files, make sure you grab them before you exit.
 
@@ -67,7 +69,6 @@ When you run the labs locally, you need the following prerequisites installed on
 - A terminal command line interface running `bash` shell.
 - Docker, including Docker Compose—Community Edition is fine.
   - If you do not already have Docker installed, open [this link](https://docs.docker.com/install/#supported-platforms) and then click the link for the installation instructions for your platform.
-  - Instructions for installing docker-compose for a variety of platforms can be found [here](https://docs.docker.com/compose/install/).
 - Git
   - [This link](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) provides installation instructions for Mac, Linux (including if you are running Linux using VirtualBox) and native Windows (without VirtualBox).
 

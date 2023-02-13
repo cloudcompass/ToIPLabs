@@ -12,7 +12,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-For this lab, we are going to use [these instructions in the ACA-Py repository](https://github.com/hyperledger/aries-cloudagent-python/blob/master/DevReadMe.md#configuring-aca-py-command-line-parameters) to review the current set of command line parameters for ACA-Py. To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
+For this lab, we are going to use [these instructions in the ACA-Py repository](https://github.com/hyperledger/aries-cloudagent-python/blob/main/DevReadMe.md#configuring-aca-py-command-line-parameters) to review the current set of command line parameters for ACA-Py. To prepare to run the lab, clone the ACA-Py github repo (locally or on Play with Docker):
 
 ```bash
 git clone https://github.com/hyperledger/aries-cloudagent-python
@@ -46,7 +46,7 @@ scripts/run_docker start --help
 There are a lot of options! Note the environment variables that you can use as an alternative to using the command line options. And don't forget
 about using an ACA-Py config YAML file. So many options for options!
 
-One more thing for those that might be interested. To see how to build ACA-Py, we can take a look at the dockerfile used by the `run_docker` script by running this command:
+One more thing for those that might be of interest. To see how to build ACA-Py, we can take a look at the dockerfile used by the `run_docker` script by running this command:
 
 ```bash
 cat docker/Dockerfile.run

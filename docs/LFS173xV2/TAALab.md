@@ -7,8 +7,10 @@ that those writing to the ledger agree to the legal "terms of use" of the ledger
 the author agrees not to write private data or anything illegal to post on the ledger. But the TAA can hold anything, so it's a good idea to
 look at the document, or better, have your lawyer look at the details.
 
-In this lab, we're just going to use the ACA-Py Admin API to retrieve and accept the TAA. We're not going to write any data to the ledger
-since we won't have a DID that permits us to do that. But with a permissioned DID on the ledger, we could write data!
+In this lab, we're just going to use the ACA-Py Admin API to retrieve and accept
+the TAA. We're not going to write any data to the ledger since we won't have a
+DID that permits us to do that. But when you have a permissioned DID on the
+ledger, you can write to the ledger -- once you accept the TAA.
 
 ## How to Run
 

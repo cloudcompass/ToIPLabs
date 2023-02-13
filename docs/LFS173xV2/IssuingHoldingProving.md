@@ -11,7 +11,7 @@ There are no components for you to deploy on your own system for this lab as we 
 ## Instructions
 
 This tutorial is part of the BC Government’s open source
-[vc-authn-oidc](https://github.com/bcgov/vc-authn-oidc/blob/master/docs/README.md)
+[vc-authn-oidc](https://github.com/bcgov/vc-authn-oidc/blob/main/docs/README.md)
 repository that provides an easy way to use verifiable credentials as an Open ID
 Connect (OIDC) identity provider (IdP). Don’t worry if you don’t know anything
 about OIDC or IdPs as that isn’t the focus of the lab. It’s about a service
@@ -20,7 +20,7 @@ mobile agent, and then using that mobile agent to prove the credentials to a
 verifier.
 
 The instructions for the lab can be found
-[here](https://github.com/bcgov/vc-authn-oidc/blob/master/docs/DemoInstructions.md),
+[here](https://github.com/bcgov/vc-authn-oidc/blob/main/docs/DemoInstructions.md),
 including how you can get an a mobile agent. There are some extra links in the
 instructions that you may or may not want to follow, depending on your interest
 in OIDC. They are not part of the lab.

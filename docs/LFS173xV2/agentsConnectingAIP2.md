@@ -53,7 +53,7 @@ controller) is unaffected.
 
 So, remembering the extra option and what to look at to see the difference,
 complete the lab by following the [instructions
-here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo),
+here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo),
 stop once the connection is established. The astute participants will notice
 that we don't add the extra option to the Alice agent. That's because Faber is
 initiating the invitation, and has to be told what version of invitation to
@@ -76,10 +76,10 @@ the "Connections to DID Exchange" transition, the process is defined in [RFC 049
 
 Navigating the code is pretty straight forward in this case, there's not much different from the previous "Connecting..." lab we did. Recall from that where the code for the agents reside:
 
-- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/alice.py)
-- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/faber.py)
-- Both Alice and Faber are instances of agents in the file [demo/runners/agent_container.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/agent_container.py)
-- The Alice and Faber agents are instances of the DemoAgent class imported into agent container from [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo/runners/support/agent.py)
+- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/alice.py)
+- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/faber.py)
+- Both Alice and Faber are instances of agents in the file [demo/runners/agent_container.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/agent_container.py)
+- The Alice and Faber agents are instances of the DemoAgent class imported into agent container from [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo/runners/support/agent.py)
 
 During the connection process, the only differences in the demo controller code are:
 

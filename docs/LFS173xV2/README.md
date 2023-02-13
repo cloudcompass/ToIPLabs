@@ -13,11 +13,11 @@ The following labs in this GitHub repository are included in the course:
 - [OpenAPI/Swagger Controller](OpenAPIIntroduction.md)
 - [Help Alice Get a Job](HelpAliceGetAJob.md)
 - [Aries ACA-Py Controllers Examples](AriesACAPyControllers.md)
-- [Using the Trinsic Studio](TrinisicStudio.md)
-- [Getting Started with AF-Go](AFGoGettingStarted.md)
+- [Getting Started with Aries Framework Go](AFGoGettingStarted.md)
+- [Getting Started with Aries Framework JavaScript](AFJGettingStarted.md)
+- [Getting Started with Aries VCX](AriesVCXGettingStarted.md)
 - [Executing a Protocol](OpenAPIController.md)
-- [Executing a Protocol, AIP 2.0-style](OpenAPIControllerAIP2.md)
-- [The Aries Toolbox](AriesToolboxLab.md)
+- [Executing a Protocol Using JSON-LD Credentials](OpenAPIControllerUsingJSONLDCredentials.md)
 - [Aries Agent Test Harness](AriesTestHarness.md)
 - [Aries Interoperability Information](AATHInfo.md)
 - [Aries Agent Test Harness Mobile Backchannel](AATHMobileBackchannel.md)
@@ -25,6 +25,8 @@ The following labs in this GitHub repository are included in the course:
 - [Using a Mediator](MediatorLab.md)
 - [Dealing with an Indy TAA](TAALab.md)
 - [Scripting Production Writes](ProductionWrites.md)
+- [Using the Aries Endorser Service to Endorse Indy Transactions](UsingAriesEndorserService.md)
+- [Revoking Credentials](FaberRevokesAliceCredential.md)
 
 As things change in these materials, updates will be made to this [Change Log](ChangeLog.md).
 

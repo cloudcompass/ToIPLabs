@@ -69,7 +69,7 @@ To get to a command line for running a lab, do the following:
 *   Go to [https://labs.play-with-docker.com](https://labs.play-with-docker.com/) (called Play with Docker)
 *   Click `Start` and the `+ Add New Instance` to start a terminal window
 
-Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git`, `docker `and `docker-compose`, plus an editor if you want to update files as you experiment.
+Once running a terminal window, follow the specific examples for the lab. The Linux instance you are using has everything you need to run the labs preinstalled, such as `git` and `docker`, plus an editor if you want to update files as you experiment.
 
 If instructed to open an additional terminal, hit the `+ Add New Instance` again.
 
@@ -100,7 +100,6 @@ When you run the labs locally, you need the following prerequisites installed on
 *   A terminal command line interface running `bash` shell.
 *   Docker, including Docker Compose—Community Edition is fine.
     *   If you do not already have Docker installed, open [this link](https://docs.docker.com/install/#supported-platforms) and then click the link for the installation instructions for your platform.
-    *   Instructions for installing docker-compose for a variety of platforms can be found [here](https://docs.docker.com/compose/install/).
 *   Git
     *   [This link](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) provides installation instructions for Mac, Linux (including if you are running Linux using VirtualBox) and native Windows (without VirtualBox).
 
