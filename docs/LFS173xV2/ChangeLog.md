@@ -12,6 +12,10 @@ If you are interested in keeping up to date with the content changes, bookmark t
 
 ## Change Log
 
+### 2023.02.23
+
+Third version of the course published.
+
 ### 2021.08.24
 
 Second version of the course published.

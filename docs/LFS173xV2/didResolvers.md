@@ -21,31 +21,39 @@ Entities that specify, implement and [register at W3C](https://w3c.github.io/did
 a DID Method can contribute a resolver for their DID Method to the Universal Resolver project.
 Given a DID of any supported DID Method, an instance of the Universal Resolver returns the DIDDoc and DID Metadata (if any) associated with the DID.
 
-Before we start resolving DIDs, click on the orange warning icon on the top left of the page and read the caveats. As of writing
-this (mid-2021) there are two. The first ("DIDs are evolving...") is becoming less and less of a concern as time
-goes by and the DID specification is hardened. The specification is a W3C "Proposed Recommendation", and will transition
-from their to (hopefully) a standard in the near future. The second warning is more interesting, suggesting that as a
-central resource, it should not be used for production. Rather, if you want to use a universal resolver capability,
-you should deploy and operate your own, making sure that it is secure and serves your purpose. That's a good advice
-and something to think about as you decide to expand the DIDs that you are willing to accept.
+Before we start resolving DIDs, click on the orange warning icon on the top left
+of the [DIF Resolver](https://dev.uniresolver.io/) page and read the caveats. As
+of writing this (early-2023) there are two. The first ("DIDs are evolving...")
+is becoming less and less of a concern as time passes. The [DID
+specification](https://www.w3.org/TR/did-core/) became an official W3C
+"Recommendation" on July 19, 2022. The second warning is more interesting for
+developers, suggesting that as a central resource, it should not be used for
+production. Rather, if you want to use a universal resolver capability, you
+should deploy and operate your own, making sure that it is secure and serves
+your purpose. That's a good advice and something to think about as you decide to
+expand the DIDs that you are willing to accept.
 
 Given that, let's start resolving some DIDs. For each DID, copy the DID given, paste it into the "DID URL" text
 box, click the `Resolve` button and look at the results. Generally, we care most about the "DID Document" tab,
 as that is what an Aries Agent will want to use. However, you should also scan the other documents.
 
-First, we can look at DID that I use as a part of the Sovrin Foundation, `did:sov:7Tqg6BwSSWapxgUDm9KKgg`. It's a DID
+First, we can look at a DID that I use as a part of the Sovrin Foundation, `did:sov:7Tqg6BwSSWapxgUDm9KKgg`. It's a DID
 found on the Sovrin MainNet, as you can see from by looking at using [IndyScan.io](https://indyscan.io) by clicking [here](https://indyscan.io/tx/SOVRIN_MAINNET/domain/54474). Note the minimal information on the Sovrin Ledger--just a
 DID and verkey, and the relatively long DID Document shown by the Universal Resolver. That's because the
 [Sovrin DID Method](https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html)
 defines how to transform a Sovrin MainNet DID into a DIDDoc, and it includes a number of standard entries
 derived from just the minimal information stored on the ledger.
 
-Next, let's look at a `did:web` DID method, and in particular, `did:web:did.actor:alice`. The `did:web` method is interesting.
-It works by an entity with a DNS entry including it in the DID after `did:web` (so `did.actor` in our example) and then
-having the full DIDDoc for the DID at the location `https://<dns>/<did>/did.json`. So, for Alice's DID above, we can get the
-same DIDDoc by going to the web URL: [https://did.actor/alice/did.json](https://did.actor/alice/did.json). Try it!
-The `did.actor` site has been set up as a demonstration, but it works for any DNS entry. If you have access to your own
-web server, you can add a `did.json` document and resolve it as a DID. Cool stuff!
+Next, let's look at a `did:web` DID method, and in particular,
+`did:web:did.actor:alice`. The `did:web` method is interesting. It works by an
+entity with a DNS entry (e.g., anyone with a website) including the DNS name in the DID
+after `did:web` (so `did.actor` in our example) and then having the full DIDDoc
+for the DID stored on the web server at the location `https://<dns>/<did>/did.json`. So, for Alice's DID
+above, we can get the same DIDDoc by going to the web URL:
+[https://did.actor/alice/did.json](https://did.actor/alice/did.json). Try it!
+The `did.actor` site has been set up as a demonstration, but it works for any
+DNS entry. If you have access to your own web server, you can add a `did.json`
+document and resolve it as a DID. Cool stuff!
 
 Another self-published DID Method (no distributed ledger needed!) is `did:github`, such as `did:github:gjgd`. Check
 out the `did:github` DID Method and see if you can publish your own resolvable DID. The hardest part is generating
@@ -60,7 +68,7 @@ the DIDs are published. We suggest you look at examples for these DID Methods:
 - `did:btcr` a DID on the Bitcoin ledger
 - `did:erc725` a DID on the Ethereum ledger
 - `did:ethr` another DID method using the Ethereum ledger
-- `did:ion` a DID rooted in the Bitcoin ledger using Microsoft's DID Method
+- `did:ion` a DID rooted in the Bitcoin ledger using Microsoft's [Ion DID Method](https://identity.foundation/ion/)
 - `did:ipid` a DID based on the IPFS "Interplanetary File System"
 - `did:key` a DID not on a ledger, just a public key wrapped in the DID itself
 

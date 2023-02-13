@@ -10,7 +10,6 @@ To run this Indy Agent demonstration on your local machine, you must have the fo
 
 - Docker, including Docker Compose - Community Edition is fine.
   - If you do not already have Docker installed, open [this link](https://docs.docker.com/install/#supported-platforms) and then click the link for the installation instructions for your platform.
-  - Instructions for installing docker-compose for a variety of platforms can be found [here](https://docs.docker.com/compose/install/).
 - git
   - [This link](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/) provides installation instructions for Mac, Linux (including if you are running Linux using VirtualBox) and native Windows (without VirtualBox).
 
@@ -20,9 +19,8 @@ To install the demonstration on your local machine, you need to clone the git re
 
 1. Install the prerequisites listed above and make sure they are functioning on your system. To verify, open a terminal window and:
     1. Run `git --version`, which should return something like: git version 2.17.1
-    2. Run `docker --version`, which should return something like: `Docker version 18.06.1-ce, build e68fc7a`
-    3. Run `docker-compose --version`, which should return something like: `docker-compose version 1.22.0, build f46880fe`
-    4. Your version numbers should be the same or higher.
+    2. Run `docker --version`, which should return something like: `Docker version 23.0.1, build a5ee5b1`
+    3. Your version numbers should be the same or higher.
 2. Open a terminal session and navigate to where you want to install the source code.
 
 3. Run the command:
@@ -88,4 +86,4 @@ Although we don't talk about them in the demo overview, there are two additional
 
 ## Stopping the Demo
 
-To stop the demo, go to the terminal window where you ran docker-compose up. If the logs are scrolling and/or you are not at the command prompt, hit Ctrl-C and you should be back at  command prompt. Run the command `./manage down`. You should see a list of the containers and a Done message as each stops. Run the command `docker ps` to confirm that all of the containers have stopped.
+To stop the demo, go to the terminal window where you ran `./manage up` command. If the logs are scrolling and/or you are not at the command prompt, hit Ctrl-C and you should be back at  command prompt. Run the command `./manage down`. You should see a list of the containers and a Done message as each stops. Run the command `docker ps` to confirm that all of the containers have stopped.

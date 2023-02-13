@@ -77,7 +77,7 @@ Although we don't talk about them in the demo overview, there are two additional
 
 ## Stopping the Demo
 
-To stop the demo, go to the browser tab where you ran `docker-compose up`, click the red `Close Session` button on the left and close the browser tab. Note that if you don't close the session or the tab, the terminal session will expire 4 hours after you started it.
+To stop the demo, go to the browser tab where you ran `docker compose up`, click the red `Close Session` button on the left and close the browser tab. Note that if you don't close the session or the tab, the terminal session will expire 4 hours after you started it.
 
 ## Running the Demo on Your Own Machine
 

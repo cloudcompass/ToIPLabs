@@ -56,12 +56,12 @@ the Toolbox previously, you might see other connections. If so, you can delete t
 
 ### Running ACA-Py Agents
 
-In your second terminal, get a local clone of the Aries ACA-Py Plugins Toolbox repo and use docker-compose to start up Alice and Bob:
+In your second terminal, get a local clone of the Aries ACA-Py Plugins Toolbox repo and use `docker compose` to start up Alice and Bob:
 
 ```bash
 git clone https://github.com/hyperledger/aries-acapy-plugin-toolbox
 cd aries-acapy-plugin-toolbox/demo
-docker-compose -f docker-compose.alice-bob.yml up --build
+docker compose -f docker-compose.alice-bob.yml up --build
 
 ```
 
@@ -104,7 +104,7 @@ To stop the ACA-Py agents, go to the second terminal and:
 - To cleanup the docker sessions run:
 
   ``` bash
-  docker-compose -f docker-compose.alice-bob.yml down
+  docker compose -f docker-compose.alice-bob.yml down
 
   ```
 

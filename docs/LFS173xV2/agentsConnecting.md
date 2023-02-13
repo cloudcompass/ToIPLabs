@@ -26,7 +26,7 @@ This lab from the ACA-Py repository includes details about running the example l
 
 ## Instructions
 
-This tutorial in the ACA-Py repository spins up agents for Alice and Faber and has them connect and exchange messages. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo), stopping at the end of the “Exchanging Messages” section. We’ll do the rest of the tutorial later (which admittedly, isn’t much!).
+This tutorial in the ACA-Py repository spins up agents for Alice and Faber and has them connect and exchange messages. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo), stopping at the end of the “Exchanging Messages” section. We’ll do the rest of the tutorial later (which admittedly, isn’t much!).
 
 One important thing to understand about this particular demo is the agent and controller integration. As we stressed in the course, ACA-Py runs two processes: one for the agent and one for the controller. However, in this demo it appears that the two are run with one command—and that can be a little confusing. In fact, they don’t run in the same **process**. The demo uses a Python feature such that the controller starts the ACA-Py instance as a sub-process. Use the links below to see the relevant code for that:
 
@@ -37,14 +37,19 @@ There has been discussion of changing this demo to make the separation of contro
 
 ## Navigating the Code
 
-Now let’s take a look at the controller code. We’ll cover here the important parts of the controllers starting up, connecting and sending text messages. In a later lab, we’ll complete the demo through issuing and proving verifiable credentials and cover those parts of the controller code. Since we aren’t dealing with verifiable credentials in this part of the code walk through, little of what is covered here relates to Indy or an Indy ledger.
+Now let’s take a look at the controller code. We’ll cover here the important parts of the controllers starting up, connecting and sending text messages. In a later lab, we’ll complete the demo through issuing and proving verifiable credentials and cover those parts of the controller code. Since we aren’t dealing with verifiable credentials in this part of the code walk through, little of what is covered here relates to AnonCreds or an Indy ledger.
 
-Note that the links to specific lines in the code go to a specific version (commit) of the file in GitHub that may not be the latest. As such, the line numbers in GitHub may be slightly different than what is on your system (the latest version).
+> **Note:** The links in these instructions to specific lines in the code go to a
+specific version (commit) of the files in GitHub that may not be the latest. As
+such, the line numbers in GitHub may be slightly different than what is on your
+editor (the latest version on the main branch). The links are using commit
+d78d4ea483e76c8033141e3c6c8e1a68e3a72096 from June 30, 2021. We'll
+be doing an update of these links to a more recent commit in the near future.
 
-- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/alice.py)
-- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/faber.py)
-- Both Alice and Faber are instances of agents in the file [demo/runners/agent_container.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/agent_container.py)
-- The Alice and Faber agents are instances of the DemoAgent class imported into agent container from [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo/runners/support/agent.py)
+- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/alice.py)
+- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/faber.py)
+- Both Alice and Faber are instances of agents in the file [demo/runners/agent_container.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/agent_container.py)
+- The Alice and Faber agents are instances of the DemoAgent class imported into agent container from [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo/runners/support/agent.py)
 
 ### Faber Controller
 
@@ -88,7 +93,7 @@ Note that the links to specific lines in the code go to a specific version (comm
 
 - The user [chose Option 3](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/faber.py#L480), send a message.
   - Prompt for the message.
-  - “await faber_agent.agent.admin_POST …” invoke ACA-Py to start an instance of the Basic Message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/master/features/0095-basic-message)).
+  - “await faber_agent.agent.admin_POST …” invoke ACA-Py to start an instance of the Basic Message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/main/features/0095-basic-message)).
 
 ### Alice Controller
 
@@ -115,18 +120,18 @@ The [startup of the Alice controller](https://github.com/hyperledger/aries-cloud
 
 - The user [chose Option 3](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/alice.py#L177), send a message.
   - Prompt for the message.
-  - “await alice_agent.agent.admin_POST …” invoke ACA-Py to start an instance of the Basic Message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/master/features/0095-basic-message)).
+  - “await alice_agent.agent.admin_POST …” invoke ACA-Py to start an instance of the Basic Message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/main/features/0095-basic-message)).
 
-While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [connections](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/connections) and [basic message](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/basicmessage) protocol handlers.
+While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [connections](https://github.com/hyperledger/aries-cloudagent-python/tree/main/aries_cloudagent/protocols/connections) and [basic message](https://github.com/hyperledger/aries-cloudagent-python/tree/main/aries_cloudagent/protocols/basicmessage) protocol handlers.
 
 ## Takeaways
 
 This lab demonstrates:
 
 - Starting agents.
-- Generating an (AIP 1.0) invitation using the connection protocol ([RFC 0160](https://github.com/hyperledger/aries-rfcs/tree/master/features/0160-connection-protocol)).
+- Generating an (AIP 1.0) invitation using the connection protocol ([RFC 0160](https://github.com/hyperledger/aries-rfcs/tree/main/features/0160-connection-protocol)).
 - Processing an invitation.
-- Sending a basic message using the basic message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/master/features/0095-basic-message)).
+- Sending a basic message using the basic message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/main/features/0095-basic-message)).
 - Receiving a basic message.
 
 This lab provides a good introduction to the construction of a controller for an ACA-Py instance. Developers should focus on connecting what they see on the command line with the code that is making that happen.

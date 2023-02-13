@@ -22,15 +22,20 @@ This lab from the ACA-Py repository includes details about running the example l
 
 ## Instructions
 
-We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo#the-alicefaber-python-demo), this time completing the full tutorial.
+We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo), this time completing the full tutorial.
 
 When we ran this code in an earlier lab, we linked to the specific lines of controller code that handled the early part of the demo. Here are the key elements of the credential exchange handling within the controllers. Recall that the actual calls to the `indy-sdk` are embedded in ACA-Py, and the controller just has to use the REST API exposed by the API agent to trigger and handle the agent-related actions.
 
-**Note:** _The links to specific lines in the code go to a specific version of the file in GitHub that may not be the latest. As such, the line numbers in GitHub may be slightly different than what is on your system (the latest version)._
+> **Note:** _The links in these instructions to specific lines in the code go to a
+specific version (commit) of the files in GitHub that may not be the latest. As
+such, the line numbers in GitHub may be slightly different than what is on your
+editor (the latest version on the main branch). The links are using commit
+d78d4ea483e76c8033141e3c6c8e1a68e3a72096 from June 30, 2021. We'll
+be doing an update of these links to a more recent commit in the near future._
 
-- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/alice.py)
-- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/faber.py)
-- Both Alice and Faber are instances of [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/master/demo/runners/support/agent.py)
+- Alice agent code is in the repo file [demo/runners/alice.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/alice.py)
+- Faber agent code is in the file [demo/runners/faber.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/faber.py)
+- Both Alice and Faber are instances of [demo/runners/support/agent.py](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo/runners/support/agent.py)
 
 ### Faber Controller
 
@@ -63,7 +68,7 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
     - “offer_request = …” prepare to send the request to Alice.
       - Note that the “connection_id” setting is hard coded - Faber only talks to Alice. That’s not very realistic!
       - In a real system, this is likely passed in as part of the “issue a credential” external event such as a web request.
-    - “await faber_agent.agent.admin_POST…” to initiate the AIP 1.0 “issue credential” Aries protocol ([RFC 0036](https://github.com/hyperledger/aries-rfcs/tree/master/features/0036-issue-credential)).
+    - “await faber_agent.agent.admin_POST…” to initiate the AIP 1.0 “issue credential” Aries protocol ([RFC 0036](https://github.com/hyperledger/aries-rfcs/tree/main/features/0036-issue-credential)).
 
 #### Request From User to Send Proof Request
 
@@ -74,7 +79,7 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
   - “req_preds = …” require that the age be greater or equal to 18 and that the claim come from a credential issued by Faber’s DID.
   - “indy_proof_request = ... “ prepare the proof request data structure.
   - “proof_request_web_request = …” prepare the web request data structure.
-  - “await agent.admin_POST ...” invoke ACA-Py to start the “present proof” Aries protocol ([RFC 0037](https://github.com/hyperledger/aries-rfcs/tree/master/features/0037-present-proof))
+  - “await agent.admin_POST ...” invoke ACA-Py to start the “present proof” Aries protocol ([RFC 0037](https://github.com/hyperledger/aries-rfcs/tree/main/features/0037-present-proof))
 
 ### Alice Controller
 
@@ -108,7 +113,7 @@ When we ran this code in an earlier lab, we linked to the specific lines of cont
   - "state == "presentation_received"..." is not for Alice (the Holder/Prover), it's for Faber (the Verifier). In this demo agent implementation, the handling for the verifier and holder/prover are together.
   - Note that the AIP 2.0 version of "handle_present_proof" protocol is handled in the next method.
   
-While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [issue credential](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/issue_credential) and [present proof](https://github.com/hyperledger/aries-cloudagent-python/tree/master/aries_cloudagent/protocols/present_proof) protocol handlers. Look into the “v1.0” folder for the Python code. And of course, those really interested can drill down into the Indy SDK, and even deeper into Ursa.
+While we won’t go into detail here about the internals of ACA-Py (since developers that write controllers don’t need to do that), for the curious, here are the links to the ACA-Py code for the [issue credential](https://github.com/hyperledger/aries-cloudagent-python/tree/main/aries_cloudagent/protocols/issue_credential) and [present proof](https://github.com/hyperledger/aries-cloudagent-python/tree/main/aries_cloudagent/protocols/present_proof) protocol handlers. Look into the “v1.0” folder for the Python code. And of course, those really interested can drill down into the Indy SDK, and even deeper into Ursa.
 
 ## Takeaways
 

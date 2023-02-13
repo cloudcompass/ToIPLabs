@@ -1,4 +1,4 @@
-# Lab: Executing a Protocol
+# Lab: Executing Aries Protocols Using OpenAPI/Swagger
 
 ## Overview
 
@@ -12,7 +12,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-The instructions for this lab can be found [here](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/AriesOpenAPIDemo.md) in the ACA-Py repository. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and consider how you would code an application to automate the manual steps in a generalized way.For example:
+The instructions for this lab can be found [here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AriesOpenAPIDemo.md) in the ACA-Py repository. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and consider how you would code an application to automate the manual steps in a generalized way.For example:
 
 - If you really were Faber’s controller, how would you handle executing thousands of protocol instances running in parallel between you and all of Faber’s alumni?
 - How would you interface with Faber College’s backend information systems?
@@ -23,11 +23,20 @@ The instructions for this lab can be found [here](https://github.com/hyperledger
 This lab demonstrates executing the HTTP interfaces used by instances of ACA-Py and their controllers (in this case, you) to execute Aries protocols. It shows:
 
 - Controllers initiating several protocols:
-  - Alice initiating a connection protocol ([RFC 0160](https://github.com/hyperledger/aries-rfcs/tree/master/features/0160-connection-protocol)).
-    - Although Faber did take the first step, Alice initiated the interaction protocol by accepting the invitation.
-  - Alice initiating a basic message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/master/features/0095-basic-message)).
-  - Faber initiating an issue credential protocol ([RFC 0036](https://github.com/hyperledger/aries-rfcs/tree/master/features/0036-issue-credential)).
-  - Faber initiating a present proof protocol ([RFC 0037](https://github.com/hyperledger/aries-rfcs/tree/master/features/0037-present-proof)).
+  - Faber generating an invitation using the AIP 1.0 Connections protocol ([RFC 0160](https://github.com/hyperledger/aries-rfcs/blob/main/features/0160-connections/README.md)).
+  - Alice responding to the invitation using AIP 1.0 Connections protocol ([RFC 0160](https://github.com/hyperledger/aries-rfcs/blob/main/features/0160-connections/README.md)).
+    - The use of the AIP 1.0 protocols in the demo instructions (as of February
+    2023) need to be updated to use the AIP 2.0 [RFC 0434
+    Out-of-Band](https://github.com/hyperledger/aries-rfcs/blob/main/features/0434-outofband/README.md)
+    and [RFC 0023
+    DID-Exchange](https://github.com/hyperledger/aries-rfcs/blob/main/features/0023-did-exchange/README.md)
+    protocols for generating the invitation and responding to the invitation,
+    respectively. If that update to the demo has not yet been done, you might
+    want to see if you can use those protocols to establish the connection
+    between the two agents. Either way, the resulting connection is the same.
+  - Alice initiating a basic message protocol ([RFC 0095](https://github.com/hyperledger/aries-rfcs/tree/main/features/0095-basic-message)).
+  - Faber initiating an issue credential protocol ([RFC 0453](https://github.com/hyperledger/aries-rfcs/tree/main/features/0453-issue-credential-v2/README.md)).
+  - Faber initiating a present proof protocol ([RFC 0454](https://github.com/hyperledger/aries-rfcs/tree/main/features/0454-present-proof-v2/README.md)).
 - Events from ACA-Py being received by controllers via a webhooks as the protocol moves forward.
 - The controller pulling data from the events to process and respond to those events.
 

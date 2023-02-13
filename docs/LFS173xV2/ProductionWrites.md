@@ -31,14 +31,14 @@ this is a good exercise to go through to understand the interactions that must
 happen. Even when the process is fully automated within a framework, the steps still have to happen.
 
 Further, as you do these operations, please note that you are updating your
-agent’s storage (it’s Indy wallet) and so you must make sure the wallet is
+agent’s secure storage database and so you must make sure the database is
 preserved. Once the process is complete, the agent that will ultimately use
 these objects (the DIDs, schema and credential definitions) **must** use the
-same wallet. An example is given of how to backup a wallet (using export) as
-part of the process.
+same secure storage database. An example is given of how to backup a secure
+storage database (using export) as part of the process.
 
 To run the lab, see the [instructions
-here](https://github.com/bcgov/von-network/blob/master/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md).
+here](https://github.com/bcgov/von-network/blob/main/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md).
 As noted above, these steps must be run with using Docker locally. It does
 **NOT** work using Play with Docker.
 
@@ -49,17 +49,27 @@ permissioned ledger, where (in some cases) transactions must be signed and
 written to the ledger by endorsers on behalf of those without write permissions.
 
 As you complete the exercise, consider how this process could be improved (it
-couldn’t get any worse!). In Aries Cloud Agent Python, the solution is
-to implement a "Please endorse this" protocol. Agents can be started as
-Authors with a known DID for an Endorser that they use. The Endorser is
-an agent that may have an allow list of Author agents, or on request,
-might check to see if they are to be Endorser for a given Author.
-Whenever the Author needs a transaction signed, they send the request
-(using the DIDComm protocol) to the Endorser they know about and hope
-that they get back a signed transaction to submit to the ledger.
+couldn’t get any worse!). In Aries Cloud Agent Python, the solution has
+been fully automated:
 
-As of the writing of this course, this functionality is close to
-complete in ACA-Py, but not quite there. If you are interested
-in this functionality, check in with the ACA-Py team 
+- An entity with an Endorser DID (a DID with permissions to endorse transactions
+on an Indy ledger) runs an instance of the [Aries Endorser Service].
+  - The [Aries Endorser Service] is a repository containing a configuration of
+  ACA-Py suitable for use as an Endorser on a specific Indy Ledger.
+- One or more ACA-Py instances with author DIDs (DIDs on an Indy ledger
+  without permission to write a transaction to the ledger) are configured to
+  use the [Aries Endorser Service] instance when needed.
+- When an author needs to write a transaction to an Indy ledger, they prepare
+the transaction and then send it to their designated [Aries Endorser Service].
+- Upon receiving a transaction from an authorized Aries author, the [Aries
+Endorser Service] endorses the transaction and returns it to the author.
+- The author submits the endorsed transaction, which will be accepted and written to the ledger.
+
+Note that there is special handling for creating the DID on the ledger for the
+author. In that case, the author requests the DID be written by the Endorser,
+and the Endorser creates, signs and submits the transaction to the ledger, and
+returns the status (success or failure) of the process to the author.
+
+[Aries Endorser Service]: https://github.com/hyperledger/aries-endorser-service
 
 That's it for this lab! Please return to the course.

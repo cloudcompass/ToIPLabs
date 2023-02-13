@@ -37,27 +37,35 @@ By the way, in the progress bar, how come the "Receiving credentials" bar moves 
 
 ### Navigating the Code
 
-As we did with the Faber and Alice code, let’s take a quick look at the code for this demo, focusing on the impact of the router in the configuration. The code for the demo is in [performance.py](https://github.com/hyperledger/aries-cloudagent-python/blob/master/demo/runners/performance.py). You’ll see it is much like the Alice and Faber code, but with all three controllers run from the same script.
+As we did with the Faber and Alice code, let’s take a quick look at the code for this demo, focusing on the impact of the router in the configuration. The code for the demo is in [performance.py](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/runners/performance.py). You’ll see it is much like the Alice and Faber code, but with all three controllers run from the same script.
 
 The main thing to note is the minimal impact of the mediator (router) on the controller code. Scanning the script we can find where the use of the router impacts the code—the places we see `if mediation` constructs:
 
-- Instantiating the mediators for Alice and Faber controller - [if needed](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/performance.py#L310)
+- Instantiating the mediators for Alice and Faber controller - [if needed](https://github.com/hyperledger/aries-cloudagent-python/blob/467104fab662507e18483abaaf2305bc702bb303/demo/runners/performance.py#L326)
 - Having Alice’s agent connect to their mediator agent - line 342
-- Having Faber;s agent connect to their mediator agent - line 345
+- Having Faber's agent connect to their mediator agent - line 345
 
 After that, the Faber and Alice controllers don’t do anything differently—the rest of the controller code is the same with or without the mediator.  The agents' ACA-Py instances do behave differently (wrapping the messages sent twice, and sending to the mediator), but that is invisible to the controllers. Likewise, the agent instances receive messages from the mediator, but again, that’s invisible to controller. Inspecting the demo "performance" code (search for "mediation"), you'll see the only other references relate to the timings of the runs.
 
 The mediator agent itself is a little bit more substantive (although not much!), but a controller writer doesn't (usually) need to write that code -- they just deploy (or use) a mediator as a dependency.
 
-- The mediator being used here is defined [here in the base agent class](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L996)
-- Alice and Faber are calling [this method](https://github.com/hyperledger/aries-cloudagent-python/blob/d78d4ea483e76c8033141e3c6c8e1a68e3a72096/demo/runners/support/agent.py#L1049) to use the instantiated mediator.
+- The mediator being used here is defined [here in the base agent class](https://github.com/hyperledger/aries-cloudagent-python/blob/467104fab662507e18483abaaf2305bc702bb303/demo/runners/support/agent.py#L1262)
+- Alice and Faber are calling [this method](https://github.com/hyperledger/aries-cloudagent-python/blob/467104fab662507e18483abaaf2305bc702bb303/demo/runners/support/agent.py#L1319) to use the instantiated mediator.
 
 The underlying message? Adding in mediators has a small impact on the controller that is going to use the mediator, but has no impact on anything else. Routing with mediators is handled at the messaging envelope protocol layer (DIDComm) without affecting the higher level Aries protocols.
+
+The links to specific lines in the code go to a specific version (commit) of the file in GitHub that may not be the latest. As such, the line numbers in GitHub may be slightly different than what is on your system (the latest version).
+
+> **Note:** The links in these instructions to specific lines in the code go to a
+specific version (commit) of the files in GitHub that may not be the latest. As
+such, the line numbers in GitHub may be slightly different than what is on your
+editor (the latest version on the main branch). The links are using commit
+467104fab662507e18483abaaf2305bc702bb303 from February 11, 2023.
 
 ## Takeaways
 
 The key takeaway from this lab is how mediators can be integrated into agent-to-agent scenarios with minimal impact to the agent controller code. There is no impact on the controllers of agents connecting to an agent with a mediator. For an agent using a mediator, there is a little bit of effort in connecting to the mediator, but after that is done, the rest of the controller operations “just work” with the mediator in place.
 
-Oh, and about the progress bar question. If you look at the "Issue Credential" protocol ([RFC 0453 Issue Credential V2](https://github.com/hyperledger/aries-rfcs/tree/master/features/0453-issue-credential-v2)), the holder receiving the credential sends an "Ack" message back to the Issuer after receiving the credential, so it completes the protocol before the Issuer, who has to wait until the "Ack" messages is received and processed.
+Oh, and about the progress bar question. If you look at the "Issue Credential" protocol ([RFC 0453 Issue Credential V2](https://github.com/hyperledger/aries-rfcs/tree/main/features/0453-issue-credential-v2)), the holder receiving the credential sends an "Ack" message back to the Issuer after receiving the credential, so it completes the protocol before the Issuer, who has to wait until the "Ack" messages is received and processed.
 
 That's it for this lab! Please return to the course.
