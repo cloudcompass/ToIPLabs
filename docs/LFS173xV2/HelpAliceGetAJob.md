@@ -26,10 +26,6 @@ The instructions for getting started with the coding [are here](https://github.c
 
 Instead of just following links and running demos, in this lab you should have been coding. How did it go?
 
-If you have a complete answer that you want to share, please submit it as PR to the
-ACA-Py repo, demo folder called "acme_complete.py". If you do that, make sure you use sign your commit for DCO ([DCO - Developer Certificate of Origin](https://github.com/apps/dco)),
-by adding the "-s" option to your commit. Hyperledger requires all commits to be signed before they can be merged.
-
-Here's a link to an [out-of-date, completed version of `acme.py`](https://github.com/ianco/aries-cloudagent-python/blob/agent_workshop/demo/acme.py). Probably not much help, but you can look!
+Here's a link to a [completed version of `acme.py`](https://github.com/hyperledger/aries-cloudagent-python/blob/acme_workshop/demo/runners/acme.py). Does it (more or less) match what you did?
 
 That's it for this lab! Please return to the course.
