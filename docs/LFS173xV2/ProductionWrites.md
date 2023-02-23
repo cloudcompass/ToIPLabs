@@ -2,6 +2,12 @@
 
 ## Overview
 
+> **This lab is currently under construction :construction:. The open source
+documentation in the repo used for this lab is out of data -- too far for the
+steps to work. We recommend that you read through the lab steps, but don't try them -- they will not work.**
+
+> **We're hoping to correct the underlying documentation soon.**
+
 In this lab, we'll show a series of scripts that can be used to write to an Indy
 ledger (such as the Sovrin MainNet) when your agent is not an endorser and so is
 not permitted to write directly to the ledger. What is required is that your
@@ -11,9 +17,12 @@ transaction to the ledger.
 
 ## How to Run
 
-This lab can only be run locally with Docker. For general instructions for on running locally with Docker, see the following:
+Oer the note above, do not run the lab as it will not work. You can read through
+the steps to get a feel for the functions, but don't run through the lab.
 
-- [Running LFS173x Labs](RunningLabs.md#running-on-docker-locally)
+~~This lab can only be run locally with Docker. For general instructions for on running locally with Docker, see the following:~~
+
+- ~~[Running LFS173x Labs](RunningLabs.md#running-on-docker-locally)~~
 
 ## Instructions
 
@@ -37,18 +46,19 @@ these objects (the DIDs, schema and credential definitions) **must** use the
 same secure storage database. An example is given of how to backup a secure
 storage database (using export) as part of the process.
 
-To run the lab, see the [instructions
+To ~~run~~ (don't run it! see the note above) **read through** the lab, see the [instructions
 here](https://github.com/bcgov/von-network/blob/main/docs/Writing%20Transactions%20to%20a%20Ledger%20for%20an%20Un-privileged%20Author.md).
-As noted above, these steps must be run with using Docker locally. It does
-**NOT** work using Play with Docker.
+
+~~As noted above, these steps must be run with using Docker locally. It does
+**NOT** work using Play with Docker.~~
 
 ## Takeaways
 
-In completing this lab you will see the complexity that comes from having a
+In ~~completing~~ reading through this lab you will see the complexity that comes from having a
 permissioned ledger, where (in some cases) transactions must be signed and
 written to the ledger by endorsers on behalf of those without write permissions.
 
-As you complete the exercise, consider how this process could be improved (it
+As you ~~complete~~ read through the exercise, consider how this process could be improved (it
 couldn’t get any worse!). In Aries Cloud Agent Python, the solution has
 been fully automated:
 
