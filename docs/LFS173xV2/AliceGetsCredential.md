@@ -22,7 +22,7 @@ This lab from the ACA-Py repository includes details about running the example l
 
 ## Instructions
 
-We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo), this time completing the full tutorial.
+We’re again going to use the tutorial on the ACA-Py Documentation site to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://aca-py.org/latest/demo/), this time completing the full tutorial.
 
 When we ran this code in an earlier lab, we linked to the specific lines of controller code that handled the early part of the demo. Here are the key elements of the credential exchange handling within the controllers. Recall that the actual calls to the `indy-sdk` are embedded in ACA-Py, and the controller just has to use the REST API exposed by the API agent to trigger and handle the agent-related actions.
 

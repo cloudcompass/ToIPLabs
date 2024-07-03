@@ -53,7 +53,7 @@ controller) is unaffected.
 
 So, remembering the extra option and what to look at to see the difference,
 complete the lab by following the [instructions
-here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo),
+here](https://aca-py.org/latest/demo/),
 stop once the connection is established. The astute participants will notice
 that we don't add the extra option to the Alice agent. That's because Faber is
 initiating the invitation, and has to be told what version of invitation to

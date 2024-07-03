@@ -22,8 +22,8 @@ cd aries-cloudagent-python/demo
 
 ```
 
-The instructions for the demo can be found on the ACA-Py [Endorser Demo](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/Endorser.md) page. The instructions are a bit sparse compared
-to the main [Alice-Faber demo instructions](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo), but hopefully they are enough to get you through it.
+The instructions for the demo can be found on the ACA-Py [Endorser Demo](https://aca-py.org/latest/demo/Endorser/) page. The instructions are a bit sparse compared
+to the main [Alice-Faber demo instructions](https://aca-py.org/latest/demo/), but hopefully they are enough to get you through it.
 
 The main differences from a regular Alice-Faber demo run are:
 

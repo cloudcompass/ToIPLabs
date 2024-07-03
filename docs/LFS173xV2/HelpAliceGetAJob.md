@@ -20,7 +20,7 @@ cd aries-cloudagent-python/demo
 
 ```
 
-The instructions for getting started with the coding [are here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AcmeDemoWorkshop.md).
+The instructions for getting started with the coding [are here](https://aca-py.org/latest/demo/AcmeDemoWorkshop/).
 
 ## Takeaways
 

@@ -26,7 +26,7 @@ This lab from the ACA-Py repository includes details about running the example l
 
 ## Instructions
 
-This tutorial in the ACA-Py repository spins up agents for Alice and Faber and has them connect and exchange messages. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/tree/main/demo#the-alicefaber-python-demo), stopping at the end of the “Exchanging Messages” section. We’ll do the rest of the tutorial later (which admittedly, isn’t much!).
+This tutorial in the ACA-Py repository spins up agents for Alice and Faber and has them connect and exchange messages. Follow the [instructions here](https://aca-py.org/latest/demo/), stopping at the end of the “Exchanging Messages” section. We’ll do the rest of the tutorial later (which admittedly, isn’t much!).
 
 One important thing to understand about this particular demo is the agent and controller integration. As we stressed in the course, ACA-Py runs two processes: one for the agent and one for the controller. However, in this demo it appears that the two are run with one command—and that can be a little confusing. In fact, they don’t run in the same **process**. The demo uses a Python feature such that the controller starts the ACA-Py instance as a sub-process. Use the links below to see the relevant code for that:
 

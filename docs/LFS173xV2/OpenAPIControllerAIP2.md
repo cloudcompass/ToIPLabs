@@ -12,7 +12,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
   
 ## Instructions
 
-The instructions for this lab can be found [here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AliceWantsAJsonCredential.md) in the ACA-Py repository. The lab covers
+The instructions for this lab can be found [here](https://aca-py.org/latest/demo/AliceWantsAJsonCredential/) on the ACA-Py Documentation site. The lab covers
 the AIP 2.0 protocols for connecting, and uses the JSON-LD verifiable credential formats (BBS+ and LD Signatures). To exchange the JSON-LD format verifiable credentials version 2.0 if the
 Issue Credential and Present Proof protocols are used. Note that while not demonstrated in the lab, Indy AnonCred format credentials can also be exchanged using the version 2.0 credential
 exchange protocols.
