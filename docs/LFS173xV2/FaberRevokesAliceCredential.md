@@ -14,7 +14,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-We’re again going to use the tutorial in the ACA-Py repository to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AliceGetsAPhone.md). The differences from the previous runs of
+We’re again going to use the tutorial on the ACA-Py Documentation site to spin up agents for Alice and Faber, have them connect, exchange messages and issue and prove a verifiable credential. Follow the [instructions here](https://aca-py.org/latest/demo/AliceGetsAPhone/). The differences from the previous runs of
 the Alice-Faber demo we have run are:
 
 - We have to run a Revocation Tails Server to run the demo.
@@ -25,7 +25,7 @@ the Alice-Faber demo we have run are:
 
 Other than that, you should find the instructions pretty similar. Give it a try!
 
-By the way, this lab can be done without the mobile phone part. You still need to have the extra tails server, but you can run the Alice command line agent exactly as you did in the initial Alice-Faber scenario. When Faber has revocation activated, the extra commands are available, and you can use the just as with the mobile demo. The details of that are outlined [here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/README.md#revocation) in the demo folder's README.md file. Don't forget to start the Tails Server before you begin!
+By the way, this lab can be done without the mobile phone part. You still need to have the extra tails server, but you can run the Alice command line agent exactly as you did in the initial Alice-Faber scenario. When Faber has revocation activated, the extra commands are available, and you can use the just as with the mobile demo. The details of that are outlined [here](https://aca-py.org/latest/demo/#revocation) on the ACA-Py documentation site. Don't forget to start the Tails Server before you begin!
 
 ## Takeaways
 

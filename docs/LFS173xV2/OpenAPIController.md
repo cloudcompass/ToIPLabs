@@ -12,7 +12,7 @@ This lab can be run locally with Docker or on Play with Docker in your browser. 
 
 ## Instructions
 
-The instructions for this lab can be found [here](https://github.com/hyperledger/aries-cloudagent-python/blob/main/demo/AriesOpenAPIDemo.md) in the ACA-Py repository. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and consider how you would code an application to automate the manual steps in a generalized way.For example:
+The instructions for this lab can be found [here](https://aca-py.org/latest/demo/AriesOpenAPIDemo/) on the ACA-Py Documentation site. As you carry out the instructions, keep track of who you are on each step (Alice’s or Faber’s controller) and consider how you would code an application to automate the manual steps in a generalized way.For example:
 
 - If you really were Faber’s controller, how would you handle executing thousands of protocol instances running in parallel between you and all of Faber’s alumni?
 - How would you interface with Faber College’s backend information systems?
