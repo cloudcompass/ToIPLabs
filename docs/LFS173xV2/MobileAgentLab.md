@@ -30,7 +30,7 @@ here.
 
 ### Aries Mobile Agent React Native / Aries Bifold
 
-The installation instructions for running a development instance of Aries Bifold can be found [here](https://github.com/hyperledger/aries-mobile-agent-react-native#install),
+The installation instructions for running a development instance of Aries Bifold can be found [here](https://github.com/openwallet-foundation/bifold-wallet/blob/main/DEVELOPER.md),
 in the repository's README. As things are changing fast with Aries Bifold, that should have the latest information, so we won't repeat the details here. The instructions
 as of last check (February, 2023) are not as complete as you will find with the BC Wallet, so it might be a bit tougher for those lacking mobile experience. On your first
 pass, we would recommend skipping the iOS steps.
